@@ -36,7 +36,7 @@ starterGui:SetCore("SendNotification", {
 })
 
 replicatedStorage.RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(v1))
-loadstring(game:HttpGet("https://pastefy.app/1UwCRnEv/raw"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Gghxgddhdmz/scriptspeed/refs/heads/main/Jeon-Hub_Gold_White.lua"))()
 
 MakeWindow({
   Hub = { Title = "- Script JG Brookhaven | V2.4 -", Animation = "Script JG Brookhaven" },
