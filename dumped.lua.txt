@@ -1,0 +1,3968 @@
+--[[
+    Deоbfuѕсаtеԁ Ԝіth LеаκD
+    https://discord.gg/AwGHNh7Z7T
+]]
+
+local starterGui = game:GetService("StarterGui")
+local players = game:GetService("Players")
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local teleportService = game:GetService("TeleportService")
+local httpService = game:GetService("HttpService")
+local runService = game:GetService("RunService")
+wait(0.1)
+
+starterGui:SetCore("SendNotification", {
+  Title = "تـم تـحـديـث سـكـربـت الـمـطـورة جـيـون",
+  Text = "جـار تـحـمـيـل... ",
+  Duration = 5,
+})
+
+wait(0.1)
+
+starterGui:SetCore("SendNotification", {
+  Title = "مـن تـطـويـر الـمـطـورة جـيـون ",
+  Text = "جـار تـحـمـيـل... ",
+  Duration = 5,
+})
+
+local v1 = { "RolePlayName", "ッ Script JG Brookhaven ッ" }
+replicatedStorage.RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(v1))
+wait(0.1)
+
+starterGui:SetCore("SendNotification", {
+  Title = "By.DeveloperJeon ",
+  Text = " تـم تـحـمـيـل سـكـربـت ",
+  Duration = 5,
+})
+
+replicatedStorage.RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(v1))
+loadstring(game:HttpGet("https://pastefy.app/1UwCRnEv/raw"))()
+
+MakeWindow({
+  Hub = { Title = "- Script JG Brookhaven | V2.4 -", Animation = "Script JG Brookhaven" },
+  Key = {
+    KeySystem = false,
+    Title = "Key System",
+    Description = "",
+    KeyLink = "",
+    Keys = { "1234" },
+    Notifi = {
+      Notifications = true,
+      CorrectKey = "Running the Script...",
+      Incorrectkey = "The key is incorrect",
+      CopyKeyLink = "Copied to Clipboard",
+    },
+  },
+})
+
+MinimizeButton({
+  Image = "rbxassetid://6675147486",
+  Size = { 50, 50 },
+  Color = Color3.fromRGB(8, 0, 0),
+  Corner = true,
+  Stroke = false,
+  StrokeColor = Color3.fromRGB(0, 0, 0),
+})
+
+local v2 = MakeTab({ Name = "{ حـقـوق }" })
+AddImageLabel(v2, { Name = "اوهـايـو", Image = "rbxassetid://6675147486" })
+
+AddSection(v2, { "أحـلا تـحـيـة لـمـؤلاتـكـم ريـمـاس " })
+
+AddSection(v2, {
+  "حـسـابـات الـمـطـوره جـيـون اي سـؤال؟  اي فـكـرة؟  اي اضـافـات؟  اي مـعـلـومـات؟ ",
+})
+
+AddButton(v2, {
+  Name = "اضـغـط ل نـسـخ حـسـاب الـمـطـورة جـيـوَن TikTok",
+  Callback = function() setclipboard("Joy._.gril") end,
+})
+
+AddButton(v2, {
+  Name = "اضـغـط ل نـسـخ حـسـاب الـمـطـورة جـيـوَن Roblox",
+  Callback = function() setclipboard("Nour_game80") end,
+})
+
+AddButton(v2, {
+  Name = "اضـغـط ل نـسـخ حـسـاب الـمـطـورة جـيـوَن Discord",
+  Callback = function() setclipboard("Joy._.girlx") end,
+})
+
+AddSection(v2, { "انـتـظـروا الـتـحـديـثـات الـقـادمـة" })
+local v3 = MakeTab({ Name = "{ الـسـيـرفـر }" })
+local placeId = game.PlaceId
+local v4 = false
+local v5 = false
+
+local function f1(title, text, p1)
+  starterGui:SetCore("SendNotification", { Title = title, Text = text, Duration = p1 or 5 })
+end
+
+local v6 = AddTextLabel(v3, "عـدد الـلأعـبـيـن فـي الـسـيـرفـر : "
+  .. #players:GetPlayers())
+
+local function f2()
+  v6.Text = "عـدد الـلأعـبـيـن فـي الـسـيـرفـر : "
+    .. #players:GetPlayers()
+end
+
+players.PlayerAdded:Connect(f2)
+players.PlayerRemoving:Connect(f2)
+
+f2()
+
+AddToggle(v3, {
+  Name = "اضـغـطِ لـ نـسـخ ID الـسـيـرفـر",
+  Default = false,
+  Callback = function(value)
+    if value then
+      setclipboard(game.JobId)
+
+      starterGui:SetCore("SendNotification", {
+        Title = "تـم الـنـسـخ",
+        Text = "تـم نـسـخ  الـسـيـرفـر بـنـجـاح",
+        Duration = 3,
+        Button1 = "مـوافـق",
+        Icon = "",
+      })
+    end
+  end,
+})
+
+AddToggle(v3, {
+  Name = "اضـغـطِ لـ إعادَة دخـول السـيـرفـر",
+  Default = false,
+  Callback = function(value2)
+    if value2 then
+      teleportService:Teleport(game.PlaceId)
+    end
+  end,
+})
+
+AddToggle(v3, {
+  Name = "اضـغـطِ لـ دخـول إلـى سـيـرفـر آخـر",
+  Default = false,
+  Callback = function(value3)
+    if value3 then
+      teleportService:Teleport(placeId)
+    end
+  end,
+})
+
+AddToggle(v3, {
+  Name = "اضـغـطِ لـ دخـول إلـى سـيـرفـر فـارغ",
+  Default = false,
+  Callback = function(value4)
+    if value4 then
+      local function f3()
+        for key, value5 in pairs(httpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"
+          .. placeId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
+          if value5.playing == 1 and value5.id ~= game.JobId then
+            return value5.id
+          end
+        end
+
+        return nil
+      end
+
+      local v7 = f3()
+
+      if v7 then
+        teleportService:TeleportToPlaceInstance(placeId, v7)
+      else
+        teleportService:Teleport(placeId)
+      end
+    end
+  end,
+})
+
+AddToggle(v3, {
+  Name = "اضـغـطِ لـ رجـوع إِلـى السـيـرفـر",
+  Default = false,
+  Callback = function(value6)
+    if value6 then
+      teleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId)
+    end
+  end,
+})
+
+AddToggle(v3, {
+  Name = "اضـغـطِ لـ تـشـغـيـل اشـعـارات دخـول الـلأعـبـيـن لـ الـسـيـرفـر ",
+  Default = false,
+  Callback = function(value7) v4 = value7 end,
+})
+
+AddToggle(v3, {
+  Name = "اضـغـطِ لـ تـشـغـيـل اشـعـارات خـروج الـلأعـبـيـن مـن الـسـيـرفـر ",
+  Default = false,
+  Callback = function(value8) v5 = value8 end,
+})
+
+players.PlayerAdded:Connect(function(player)
+  if v4 then
+    f1("دخـول الـلأعـب ", player.Name .. " دخـل الـسـيـرفـر")
+  end
+end)
+
+players.PlayerRemoving:Connect(function(player2)
+  if v5 then
+    f1(
+      "خـروج الـلأعـب ", player2.Name .. " خـرج مـن الـسـيـرفـر"
+    )
+  end
+end)
+
+local v8 = MakeTab({ Name = "{ الـلأعـب }" })
+
+AddButton(v8, {
+  Name = "- طـيـران -",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/joygril/Fly/refs/heads/main/Jeon-Fly.txt"))()
+  end,
+})
+
+AddTextBox(v8, {
+  Name = "اضـغـطِ لـ وضـع عـدد الـسـرعـة",
+  Default = "",
+  PlaceholderText = "هـنـا",
+  ClearText = true,
+  Callback = function(value9) players.LocalPlayer.Character.Humanoid.WalkSpeed = value9 end,
+})
+
+AddTextBox(v8, {
+  Name = "اضـغـطِ لـ وضـع مـسـافـة الـقـفـز",
+  Default = "",
+  PlaceholderText = "هـنـا ",
+  ClearText = true,
+  Callback = function(value10) players.LocalPlayer.Character.Humanoid.JumpPower = value10 end,
+})
+
+AddTextBox(v8, {
+  Name = "اضـغـطِ لـ وضـع سـرعـة الـدوران",
+  Default = "",
+  PlaceholderText = "هـنـا",
+  ClearText = true,
+  Callback = function(value11)
+    getgenv().Spinspeed = value11
+
+    local bodyAngularVelocity = Instance.new("BodyAngularVelocity")
+    bodyAngularVelocity.Parent = players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+    bodyAngularVelocity.MaxTorque = Vector3.new(0, math.huge, 100)
+
+    wait(0.1)
+    bodyAngularVelocity.AngularVelocity = Vector3.new(100, Spinspeed, 0)
+  end,
+})
+
+AddTextBox(v8, {
+  Name = "اضـغـطِ لـ وضـع مـسـافـة الـشـاشـة",
+  Default = "",
+  PlaceholderText = "هـنـا ",
+  ClearText = true,
+  Callback = function(value12) workspace.CurrentCamera.FieldOfView = value12 end,
+})
+
+AddTextBox(v8, {
+  Name = "اكـتـبِ الـلأسـم",
+  Default = "",
+  PlaceholderText = "اضـغـطِ لـ كـتـابـة الـلأسـم هـنـا",
+  ClearText = true,
+  Callback = function(value13)
+    replicatedStorage.RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack({
+      "RolePlayName", value13,
+    }))
+  end,
+})
+
+local v9 = false
+
+AddToggle(v8, {
+  Name = "اضـغـطِ لـ اخـذ أسـم مـلـون",
+  Callback = function(value14)
+    v9 = value14
+
+    while v9 do
+      local v10 = math.random()
+      local v11 = math.random()
+      local color = Color3.new(v10, v11, math.random())
+
+      replicatedStorage.RE:FindFirstChild("1RPNam1eColo1r"):FireServer(unpack({
+        "PickingRPNameColor", color,
+      }))
+
+      wait(0.5)
+    end
+  end,
+})
+
+AddTextBox(v8, {
+  Name = "اكـتـبِ الـبـايـو",
+  Default = "",
+  PlaceholderText = "اضـغـطِ لـ كـتـابـة الـبـايـو هـنـا",
+  ClearText = true,
+  Callback = function(value15)
+    replicatedStorage.RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack({
+      "RolePlayBio", value15,
+    }))
+  end,
+})
+
+local v12 = false
+
+AddToggle(v8, {
+  Name = "اضـغـطِ لـ اخـذ بـايـو مـلـون",
+  Callback = function(value16)
+    v12 = value16
+
+    while v12 do
+      local v13 = math.random()
+      local v14 = math.random()
+      local color2 = Color3.new(v13, v14, math.random())
+
+      replicatedStorage.RE:FindFirstChild("1RPNam1eColo1r"):FireServer(unpack({
+        "PickingRPBioColor", color2,
+      }))
+
+      wait(0.5)
+    end
+  end,
+})
+
+AddToggle(v8, {
+  Name = "اضـغـطِ لـ قـتـل نـفـسـك",
+  Default = false,
+  Callback = function(value17)
+    if value17 then
+      players.LocalPlayer.Character.Humanoid.Health = 0
+    end
+  end,
+})
+
+AddToggle(v8, {
+  Name = "اضـغـطِ لـ ازالـة كـلـشـي بـ الـسـكـن",
+  Default = false,
+  Callback = function(value18)
+    if value18 then
+      replicatedStorage.RE:FindFirstChild("1Updat1eAvata1r"):FireServer(unpack({
+        "wear", 2248242028,
+      }))
+
+      wait(0.1)
+
+      replicatedStorage.RE:FindFirstChild("1Updat1eAvata1r"):FireServer(unpack({
+        "wear", 2547392639,
+      }))
+    end
+  end,
+})
+
+AddToggle(v8, {
+  Name = "اضـغـطِ لـ حـذف جـمـيـع الأشـيـاء فـي يـدك",
+  Default = false,
+  Callback = function(value19)
+    if value19 then
+      replicatedStorage.RE:FindFirstChild("1Clea1rTool1s"):FireServer(unpack({ "ClearAllTools" }))
+    end
+  end,
+})
+
+local v15 = false
+
+local function f4(p2, canCollide)
+  for index, value20 in ipairs(p2:GetDescendants()) do
+    if value20:IsA("BasePart") then
+      value20.CanCollide = canCollide
+    end
+  end
+end
+
+AddToggle(v8, {
+  Name = " اخـتـرق الـجـدار",
+  Default = false,
+  Callback = function(value21)
+    v15 = value21
+    print("Noclip Enabled:", v15)
+    local character = players.LocalPlayer.Character
+
+    if v15 then
+      noclipLoop = runService.Stepped:Connect(function()
+        if character then
+          f4(character, false)
+        end
+      end)
+    else
+      if noclipLoop then
+        noclipLoop:Disconnect()
+      end
+
+      if character then
+        f4(character, true)
+      end
+    end
+  end,
+})
+
+local connect
+
+AddToggle(v8, {
+  Name = "قـفـل",
+  Default = false,
+  Callback = function(value22)
+    local localPlayer = players.LocalPlayer
+    local currentCamera = workspace.CurrentCamera
+
+    local humanoid = localPlayer.Character
+      and localPlayer.Character:FindFirstChildOfClass("Humanoid")
+
+    local humanoidRootPart = localPlayer.Character
+      and localPlayer.Character:FindFirstChild("HumanoidRootPart")
+
+    if value22 then
+      if humanoid then
+        humanoid.AutoRotate = false
+      end
+
+      connect = runService.RenderStepped:Connect(function()
+        if humanoidRootPart and currentCamera then
+          humanoidRootPart.CFrame = CFrame.new(humanoidRootPart.Position, Vector3.new(currentCamera.CFrame.LookVector.X
+            * 900000, humanoidRootPart.Position.Y, currentCamera.CFrame.LookVector.Z
+            * 900000))
+
+          currentCamera.CFrame = currentCamera.CFrame * CFrame.new(1.7, 0, 0)
+        end
+      end)
+    else
+      if connect then
+        connect:Disconnect()
+        connect = nil
+      end
+
+      if humanoid then
+        humanoid.AutoRotate = true
+      end
+
+      if currentCamera then
+        currentCamera.CFrame = currentCamera.CFrame * CFrame.new(-1.7, 0, 0)
+      end
+    end
+  end,
+})
+
+local v16 = MakeTab({ Name = "{ الـلأعـبـيـن }" })
+AddSection(v16, { "اضـغـطِ لـ اخـتـيـار أسـم الـلأعـب : " })
+local localPlayer2 = players.LocalPlayer
+local v17 = 0.1
+local v18 = -2
+local v19 = {}
+local v20 = false
+local v21 = false
+
+local function f5()
+  local v22 = {}
+
+  for index2, value23 in ipairs(players:GetPlayers()) do
+    if value23 ~= localPlayer2 then
+      table.insert(v22, value23.Name)
+    end
+  end
+
+  return v22
+end
+
+local v23
+
+AddDropdown(v16, {
+  Name = "اخـتـارِ الـلأعـب ",
+  Default = "",
+  Options = f5(),
+  Callback = function(value24) v23 = value24 end,
+})
+
+AddToggle(v16, {
+  Name = "نـسـخ أسـم الـلأعـب",
+  Default = false,
+  Callback = function(value25)
+    if value25 and v23 then
+      setclipboard(v23)
+    end
+  end,
+})
+
+AddToggle(v16, {
+  Name = "تـنـقـل الـى الـلأعـب",
+  Default = false,
+  Callback = function(value26)
+    if value26 and v23 then
+      local findFirstChild = players:FindFirstChild(v23)
+      local character2 = localPlayer2.Character or localPlayer2.CharacterAdded:Wait()
+
+      if findFirstChild and findFirstChild.Character and character2 then
+        local humanoidRootPart2 = character2:FindFirstChild("HumanoidRootPart")
+        local head = findFirstChild.Character:FindFirstChild("Head")
+
+        if humanoidRootPart2 and head then
+          humanoidRootPart2.CFrame = head.CFrame * CFrame.new(0, 3, 0)
+        end
+      end
+    end
+  end,
+})
+
+AddToggle(v16, {
+  Name = "مـراقـبـة الـلأعـب",
+  Default = false,
+  Callback = function(value27)
+    local currentCamera2 = workspace.CurrentCamera
+
+    if v23 then
+      local findFirstChild2 = players:FindFirstChild(v23)
+
+      if findFirstChild2 and findFirstChild2.Character then
+        currentCamera2.CameraSubject = value27
+            and findFirstChild2.Character:FindFirstChild("Humanoid")
+          or localPlayer2.Character:FindFirstChild("Humanoid")
+      end
+    end
+  end,
+})
+
+AddToggle(v16, {
+  Name = "كـشـف مـكـان الـلأعـب",
+  Default = false,
+  Callback = function(value28)
+    for key2, value29 in pairs(v19) do
+      value29:Disconnect()
+    end
+
+    table.clear(v19)
+    local esp
+
+    if v23 and value28 then
+      local findFirstChild3 = players:FindFirstChild(v23)
+
+      if findFirstChild3 and findFirstChild3.Character then
+        local head2 = findFirstChild3.Character:FindFirstChild("Head")
+
+        if head2 then
+          esp = Instance.new("BillboardGui", head2)
+          esp.Name = "ESP"
+          esp.Size = UDim2.new(0, 100, 0, 40)
+          esp.AlwaysOnTop = true
+
+          local instance = Instance.new("TextLabel", esp)
+          instance.Size = UDim2.new(1, 0, 1, 0)
+          instance.BackgroundTransparency = 1
+          instance.Text = findFirstChild3.Name
+          instance.TextColor3 = Color3.fromRGB(255, 105, 180)
+          instance.TextStrokeTransparency = 0.5
+
+          v19[findFirstChild3] = findFirstChild3.CharacterAdded:Connect(function(character3)
+            esp:Destroy()
+          end)
+        end
+      end
+    else
+      for index3, value30 in ipairs(players:GetPlayers()) do
+        if value30.Character and value30.Character:FindFirstChild("ESP") then
+          value30.Character:FindFirstChild("ESP"):Destroy()
+        end
+      end
+    end
+  end,
+})
+
+AddToggle(v16, {
+  Name = "سـحـب الـلأعـب",
+  Default = false,
+  Callback = function(value31)
+    v21 = value31
+
+    if v21 then
+      task.spawn(function()
+        while v21 and v23 do
+          local findFirstChild4 = players:FindFirstChild(v23)
+          local character4 = localPlayer2.Character
+
+          if findFirstChild4 and findFirstChild4.Character and character4 then
+            local humanoidRootPart3 = character4:FindFirstChild("HumanoidRootPart")
+            local humanoidRootPart4 = findFirstChild4.Character:FindFirstChild("HumanoidRootPart")
+
+            if humanoidRootPart3 and humanoidRootPart4 then
+              humanoidRootPart4.CFrame = humanoidRootPart3.CFrame * CFrame.new(0, 0, -2)
+            end
+          end
+
+          task.wait(0.1)
+        end
+      end)
+    end
+  end,
+})
+
+AddToggle(v16, {
+  Name = "تـتـبـع الـلأعـب",
+  Default = false,
+  Callback = function(value32)
+    v20 = value32
+
+    if v20 then
+      task.spawn(function()
+        while v20 and v23 do
+          local findFirstChild5 = players:FindFirstChild(v23)
+          local character5 = localPlayer2.Character
+
+          if findFirstChild5 and findFirstChild5.Character and character5 then
+            local humanoidRootPart5 = character5:FindFirstChild("HumanoidRootPart")
+            local humanoidRootPart6 = findFirstChild5.Character:FindFirstChild("HumanoidRootPart")
+
+            if humanoidRootPart5 and humanoidRootPart6 then
+              humanoidRootPart5.CFrame = humanoidRootPart6.CFrame * CFrame.new(0, 0, v18)
+                * CFrame.Angles(0, math.rad(180), 0)
+            end
+          end
+
+          task.wait(v17)
+        end
+      end)
+    end
+  end,
+})
+
+AddTextBox(v16, {
+  Name = "- سـرعـة الـتـتـبـع -",
+  Default = tostring(v17),
+  PlaceholderText = "مثلاً 0.1",
+  ClearText = true,
+  Callback = function(value33)
+    local v24 = tonumber(value33)
+
+    if v24 then
+      v17 = v24
+    end
+  end,
+})
+
+AddTextBox(v16, {
+  Name = "- مـسـافـة مـن الـلأعـب -",
+  Default = tostring(v18),
+  PlaceholderText = "مثلاً -2",
+  ClearText = true,
+  Callback = function(value34)
+    local v25 = tonumber(value34)
+
+    if v25 then
+      v18 = v25
+    end
+  end,
+})
+
+local v26 = MakeTab({ Name = "{ الـتـخـريـب }" })
+local localPlayer3 = players.LocalPlayer
+local v27 = {}
+local v28 = false
+local v29 = {}
+
+for index4, value35 in ipairs(players:GetPlayers()) do
+  if value35 ~= localPlayer3 then
+    table.insert(v29, value35.Name)
+  end
+end
+
+local addDropdown = AddDropdown
+local findFirstChild6
+
+addDropdown(v26, {
+  Name = "- اخـتـارِ الـلأعـب -",
+  Default = v29[1] or "",
+  Options = v29,
+  Callback = function(value36) findFirstChild6 = players:FindFirstChild(value36) end,
+})
+
+AddButton(v26, {
+  Name = "- جـلـوس ع راسـه -",
+  Callback = function()
+    local character6 = findFirstChild6 and findFirstChild6.Character and localPlayer3.Character
+    local humanoid2, instance2
+
+    if character6 then
+      local head3 = findFirstChild6.Character:FindFirstChild("Head")
+      local humanoidRootPart7 = localPlayer3.Character:FindFirstChild("HumanoidRootPart")
+      humanoid2 = localPlayer3.Character:FindFirstChildWhichIsA("Humanoid")
+
+      if head3 and humanoidRootPart7 and humanoid2 then
+        for key3, value37 in pairs(humanoidRootPart7:GetChildren()) do
+          if value37:IsA("Weld") or value37:IsA("WeldConstraint")
+            or value37:IsA("AlignPosition") or value37:IsA("AlignOrientation") then
+            value37:Destroy()
+          end
+        end
+
+        humanoidRootPart7.CFrame = head3.CFrame + Vector3.new(0, 3, 0)
+        instance2 = Instance.new("Attachment", humanoidRootPart7)
+        local instance3 = Instance.new("Attachment", head3)
+        instance2.Position = Vector3.new(0, 0, 0)
+        instance3.Position = Vector3.new(0, 1.5, 0)
+
+        local instance4 = Instance.new("AlignPosition", humanoidRootPart7)
+        instance4.Attachment0 = instance2
+        instance4.Attachment1 = instance3
+        instance4.RigidityEnabled = true
+        instance4.MaxForce = 9999999
+        instance4.Responsiveness = 200
+
+        local instance5 = Instance.new("AlignOrientation", humanoidRootPart7)
+        instance5.Attachment0 = instance2
+        instance5.Attachment1 = instance3
+        instance5.RigidityEnabled = true
+        instance5.MaxTorque = 9999999
+        instance5.Responsiveness = 200
+
+        v27 = { instance2, instance3, instance4, instance5 }
+
+        task.spawn(function()
+          while table.find(v27, instance2) do
+            humanoid2.Sit = true
+            task.wait(0.5)
+          end
+        end)
+      end
+    end
+  end,
+})
+
+AddButton(v26, {
+  Name = "- جـلـوس ع وجـهـه -",
+  Callback = function()
+    local character7 = findFirstChild6 and findFirstChild6.Character and localPlayer3.Character
+    local humanoid3, instance6, instance7, instance8
+
+    if character7 then
+      local humanoidRootPart8 = localPlayer3.Character:FindFirstChild("HumanoidRootPart")
+      humanoid3 = localPlayer3.Character:FindFirstChildWhichIsA("Humanoid")
+
+      if humanoidRootPart8 and humanoid3 then
+        for key4, value38 in pairs(humanoidRootPart8:GetChildren()) do
+          if value38:IsA("Weld") or value38:IsA("WeldConstraint")
+            or value38:IsA("AlignPosition") or value38:IsA("AlignOrientation")
+            or value38:IsA("Attachment") then
+            value38:Destroy()
+          end
+        end
+
+        instance6 = Instance.new("Attachment", humanoidRootPart8)
+        instance6.Position = Vector3.new(0, 0, 0)
+        instance6.Orientation = Vector3.new(0, 180, 0)
+
+        instance7 = Instance.new("AlignPosition", humanoidRootPart8)
+        instance7.Attachment0 = instance6
+        instance7.RigidityEnabled = true
+        instance7.MaxForce = math.huge
+        instance7.Responsiveness = 200
+
+        instance8 = Instance.new("AlignOrientation", humanoidRootPart8)
+        instance8.Attachment0 = instance6
+        instance8.RigidityEnabled = true
+        instance8.MaxTorque = math.huge
+        instance8.Responsiveness = 200
+
+        v27 = { instance6, instance7, instance8 }
+
+        task.spawn(function()
+          while table.find(v27, instance6) do
+            local upperTorso = findFirstChild6.Character:FindFirstChild("UpperTorso")
+              or findFirstChild6.Character:FindFirstChild("Torso")
+
+            if upperTorso then
+              local attachmentSitFollow = upperTorso:FindFirstChild("AttachmentSitFollow")
+                or Instance.new("Attachment", upperTorso)
+
+              attachmentSitFollow.Name = "AttachmentSitFollow"
+              attachmentSitFollow.Position = Vector3.new(0, 1.5, -0.8)
+
+              instance7.Attachment1 = attachmentSitFollow
+              instance8.Attachment1 = attachmentSitFollow
+              humanoid3.Sit = true
+            end
+
+            task.wait(0.3)
+          end
+        end)
+      end
+    end
+  end,
+})
+
+local function f6(p3)
+  if not p3 or not p3.Character or not localPlayer3.Character then
+    return
+  else
+    local humanoidRootPart9 = p3.Character:FindFirstChild("HumanoidRootPart")
+
+    if humanoidRootPart9 then
+      localPlayer3.Character:SetPrimaryPartCFrame(humanoidRootPart9.CFrame)
+    end
+
+    local upperTorso2 = p3.Character:FindFirstChild("UpperTorso")
+      or p3.Character:FindFirstChild("Torso")
+
+    local humanoidRootPart10 = localPlayer3.Character:FindFirstChild("HumanoidRootPart")
+    local humanoid4 = localPlayer3.Character:FindFirstChildWhichIsA("Humanoid")
+
+    if upperTorso2 and humanoidRootPart10 and humanoid4 then
+      for key5, value39 in pairs(humanoidRootPart10:GetChildren()) do
+        if value39:IsA("Weld") or value39:IsA("WeldConstraint") or value39:IsA("AlignPosition")
+          or value39:IsA("AlignOrientation") then
+          value39:Destroy()
+        end
+      end
+
+      local instance9 = Instance.new("Attachment", humanoidRootPart10)
+      local instance10 = Instance.new("Attachment", upperTorso2)
+      instance9.Position = Vector3.new(0, 0, 0)
+      instance10.Position = Vector3.new(0, 1.5, 1)
+      instance9.Orientation = Vector3.new(0, 180, 0)
+
+      local instance11 = Instance.new("AlignPosition", humanoidRootPart10)
+      instance11.Attachment0 = instance9
+      instance11.Attachment1 = instance10
+      instance11.RigidityEnabled = true
+      instance11.MaxForce = math.huge
+      instance11.Responsiveness = 200
+
+      local instance12 = Instance.new("AlignOrientation", humanoidRootPart10)
+      instance12.Attachment0 = instance9
+      instance12.Attachment1 = instance10
+      instance12.RigidityEnabled = true
+      instance12.MaxTorque = math.huge
+      instance12.Responsiveness = 200
+
+      v27 = { instance9, instance10, instance11, instance12 }
+      v28 = true
+      humanoid4.Sit = true
+    end
+
+    return
+  end
+end
+
+local connect2
+
+AddButton(v26, {
+  Name = "- جـلـوس ع ظـهـر -",
+  Callback = function()
+    if findFirstChild6 then
+      f6(findFirstChild6)
+
+      if connect2 then
+        connect2:Disconnect()
+      end
+
+      connect2 = findFirstChild6.CharacterAdded:Connect(function()
+        if v28 then
+          task.wait(1)
+          f6(findFirstChild6)
+        end
+      end)
+    end
+  end,
+})
+
+AddButton(v26, {
+  Name = "- ايـقـاف الـجـلـوس -",
+  Callback = function()
+    v28 = false
+
+    if connect2 then
+      connect2:Disconnect()
+    end
+
+    if localPlayer3.Character then
+      for key6, value40 in pairs(v27) do
+        if value40 and value40.Parent then
+          value40:Destroy()
+        end
+      end
+
+      v27 = {}
+      local humanoid5 = localPlayer3.Character:FindFirstChildWhichIsA("Humanoid")
+
+      if humanoid5 then
+        humanoid5.Sit = false
+      end
+    end
+  end,
+})
+
+AddButton(v26, {
+  Name = "- اضـغـطِ لـ تـشـغـيـل { Player Bang } -",
+  Callback = function()
+    local character8 = findFirstChild6 and findFirstChild6.Character and localPlayer3.Character
+    local f7, humanoidRootPart11, humanoid6
+
+    if character8 then
+      humanoidRootPart11 = localPlayer3.Character:FindFirstChild("HumanoidRootPart")
+      humanoid6 = localPlayer3.Character:FindFirstChildWhichIsA("Humanoid")
+
+      if humanoidRootPart11 and humanoid6 then
+        function f7(p4)
+          local upperTorso3 = p4:FindFirstChild("UpperTorso") or p4:FindFirstChild("Torso")
+
+          if not upperTorso3 then
+            return
+          else
+            for key7, value41 in pairs(humanoidRootPart11:GetChildren()) do
+              if value41:IsA("Weld") or value41:IsA("WeldConstraint")
+                or value41:IsA("AlignPosition") or value41:IsA("AlignOrientation") then
+                value41:Destroy()
+              end
+            end
+
+            local instance13 = Instance.new("Attachment", humanoidRootPart11)
+            local instance14 = Instance.new("Attachment", upperTorso3)
+            instance13.Position = Vector3.new(0, 0, 0)
+            instance14.Position = Vector3.new(0, 1.5, 1.5)
+
+            local alignPosition = Instance.new("AlignPosition")
+            alignPosition.Attachment0 = instance13
+            alignPosition.Attachment1 = instance14
+            alignPosition.RigidityEnabled = true
+            alignPosition.MaxForce = math.huge
+            alignPosition.Responsiveness = 200
+            alignPosition.Parent = humanoidRootPart11
+
+            local alignOrientation = Instance.new("AlignOrientation")
+            alignOrientation.Attachment0 = instance13
+            alignOrientation.Attachment1 = instance14
+            alignOrientation.RigidityEnabled = true
+            alignOrientation.MaxTorque = math.huge
+            alignOrientation.Responsiveness = 200
+            alignOrientation.Parent = humanoidRootPart11
+            alignOrientation.CFrame = CFrame.Angles(0, 0, 0)
+
+            v27 = { instance13, instance14, alignPosition, alignOrientation }
+            return
+          end
+        end
+
+        v28 = true
+        local character9 = findFirstChild6.Character
+
+        local humanoidRootPart12 = character9
+          and (character9:FindFirstChild("HumanoidRootPart")
+            or character9:FindFirstChild("Torso") or character9:FindFirstChild("UpperTorso"))
+
+        if humanoidRootPart12 then
+          humanoidRootPart11.CFrame = humanoidRootPart12.CFrame * CFrame.new(0, 0, 2)
+        end
+
+        f7(findFirstChild6.Character)
+
+        findFirstChild6.CharacterAdded:Connect(function(character10)
+          task.wait(1)
+
+          if v28 and localPlayer3.Character then
+            f7(character10)
+          end
+        end)
+
+        task.spawn(function()
+          local total = 0
+
+          while v28 and findFirstChild6 and findFirstChild6.Parent and localPlayer3.Character
+            and humanoid6 do
+            total = total + task.wait()
+            local v30 = math.sin(total * bangSpeed) * 0.5
+
+            if v27 and v27[2] then
+              v27[2].Position = Vector3.new(0, 1.5, 1.5 + v30)
+            end
+
+            humanoid6.Sit = true
+          end
+        end)
+      end
+    end
+  end,
+})
+
+AddTextBox(v26, {
+  Name = "- سـرعـة الـ Bang -",
+  Default = tostring(bangSpeed),
+  PlaceholderText = "مـثـلاً 5",
+  ClearText = true,
+  Callback = function(value42)
+    local v31 = tonumber(value42)
+
+    if v31 then
+      bangSpeed = v31
+    end
+  end,
+})
+
+AddButton(v26, {
+  Name = "- ايـقـاف الـتـشـغـيـل -",
+  Callback = function()
+    v28 = false
+
+    if localPlayer3.Character then
+      for key8, value43 in pairs(v27) do
+        if value43 and value43.Parent then
+          value43:Destroy()
+        end
+      end
+
+      v27 = {}
+      local humanoid7 = localPlayer3.Character:FindFirstChildWhichIsA("Humanoid")
+
+      if humanoid7 then
+        humanoid7.Sit = false
+      end
+    end
+  end,
+})
+
+AddButton(v26, {
+  Name = "- اضـغـطِ لـ تـشـغـيـل { Face Bang } -",
+  Callback = function()
+    local character11 = findFirstChild6 and findFirstChild6.Character and localPlayer3.Character
+    local f8, humanoidRootPart13, humanoid8
+
+    if character11 then
+      humanoidRootPart13 = localPlayer3.Character:FindFirstChild("HumanoidRootPart")
+      humanoid8 = localPlayer3.Character:FindFirstChildWhichIsA("Humanoid")
+
+      if humanoidRootPart13 and humanoid8 then
+        function f8(p5)
+          local upperTorso4 = p5:FindFirstChild("UpperTorso") or p5:FindFirstChild("Torso")
+
+          if not upperTorso4 then
+            return
+          else
+            for key9, value44 in pairs(humanoidRootPart13:GetChildren()) do
+              if value44:IsA("Weld") or value44:IsA("WeldConstraint")
+                or value44:IsA("AlignPosition") or value44:IsA("AlignOrientation") then
+                value44:Destroy()
+              end
+            end
+
+            local instance15 = Instance.new("Attachment", humanoidRootPart13)
+            local instance16 = Instance.new("Attachment", upperTorso4)
+            instance15.Position = Vector3.new(0, 0, 0)
+            instance16.Position = Vector3.new(0, 1.5, -1.5)
+            instance15.Orientation = Vector3.new(0, 180, 0)
+
+            local alignPosition2 = Instance.new("AlignPosition")
+            alignPosition2.Attachment0 = instance15
+            alignPosition2.Attachment1 = instance16
+            alignPosition2.RigidityEnabled = true
+            alignPosition2.MaxForce = math.huge
+            alignPosition2.Responsiveness = 200
+            alignPosition2.Parent = humanoidRootPart13
+
+            local alignOrientation2 = Instance.new("AlignOrientation")
+            alignOrientation2.Attachment0 = instance15
+            alignOrientation2.Attachment1 = instance16
+            alignOrientation2.RigidityEnabled = true
+            alignOrientation2.MaxTorque = math.huge
+            alignOrientation2.Responsiveness = 200
+            alignOrientation2.Parent = humanoidRootPart13
+            alignOrientation2.CFrame = CFrame.Angles(0, 0, 0)
+
+            v27 = { instance15, instance16, alignPosition2, alignOrientation2 }
+            return
+          end
+        end
+
+        v28 = true
+        local character12 = findFirstChild6.Character
+
+        local humanoidRootPart14 = character12
+          and (character12:FindFirstChild("HumanoidRootPart")
+            or character12:FindFirstChild("Torso") or character12:FindFirstChild("UpperTorso"))
+
+        if humanoidRootPart14 then
+          humanoidRootPart13.CFrame = humanoidRootPart14.CFrame * CFrame.new(0, 0, -2)
+        end
+
+        f8(findFirstChild6.Character)
+
+        findFirstChild6.CharacterAdded:Connect(function(character13)
+          task.wait(1)
+
+          if v28 and localPlayer3.Character then
+            f8(character13)
+          end
+        end)
+
+        task.spawn(function()
+          local total2 = 0
+
+          while v28 and findFirstChild6 and findFirstChild6.Parent and localPlayer3.Character
+            and humanoid8 do
+            total2 = total2 + task.wait()
+            local v32 = math.sin(total2 * bangSpeed) * 0.5
+
+            if v27 and v27[2] then
+              v27[2].Position = Vector3.new(0, 1.5, -1.5 + v32)
+            end
+
+            humanoid8.Sit = true
+          end
+        end)
+      end
+    end
+  end,
+})
+
+AddTextBox(v26, {
+  Name = "-  سـرعـة الـ Bang -",
+  Default = tostring(bangSpeed),
+  PlaceholderText = "مـثـلا 5",
+  ClearText = true,
+  Callback = function(value45)
+    local v33 = tonumber(value45)
+
+    if v33 then
+      bangSpeed = v33
+    end
+  end,
+})
+
+AddButton(v26, {
+  Name = "-  ايـقـاف الـتـشـغـيـل -",
+  Callback = function()
+    v28 = false
+
+    if localPlayer3.Character then
+      for key10, value46 in pairs(v27) do
+        if value46 and value46.Parent then
+          value46:Destroy()
+        end
+      end
+
+      v27 = {}
+      local humanoid9 = localPlayer3.Character:FindFirstChildWhichIsA("Humanoid")
+
+      if humanoid9 then
+        humanoid9.Sit = false
+      end
+    end
+  end,
+})
+
+AddTextBox(v26, {
+  Name = "- مـسـافـة الـدوران { Loopfling } -",
+  Default = tostring(rotationRadius),
+  PlaceholderText = "مـثـلا 3",
+  ClearText = true,
+  Callback = function(value47)
+    local v34 = tonumber(value47)
+
+    if v34 then
+      rotationRadius = v34
+    end
+  end,
+})
+
+AddTextBox(v26, {
+  Name = "- سـرعـة الـدوران { Loopfling } -",
+  Default = tostring(rotationSpeed),
+  PlaceholderText = "مـثـلا 10",
+  ClearText = true,
+  Callback = function(value48)
+    local v35 = tonumber(value48)
+
+    if v35 then
+      rotationSpeed = v35
+    end
+  end,
+})
+
+AddTextBox(v26, {
+  Name = "- قـوة الاهـتـزاز -",
+  Default = tostring(shakePower),
+  PlaceholderText = "مـثـلا 0.5",
+  ClearText = true,
+  Callback = function(value49)
+    local v36 = tonumber(value49)
+
+    if v36 then
+      shakePower = v36
+    end
+  end,
+})
+
+AddButton(v26, {
+  Name = "- اضـغـطِ لـ تـشـغـيـل الـدوران { Loopfling } -",
+  Callback = function()
+    if findFirstChild6 and findFirstChild6.Character and localPlayer3.Character then
+      rotationEnabled = true
+
+      task.spawn(function()
+        local humanoidRootPart15 = localPlayer3.Character:FindFirstChild("HumanoidRootPart")
+
+        while rotationEnabled and humanoidRootPart15 and findFirstChild6
+          and findFirstChild6.Character and findFirstChild6.Character:FindFirstChild("Head") do
+          local head4 = findFirstChild6.Character:FindFirstChild("Head")
+          local v37 = math.random(-rotationRadius, rotationRadius)
+          local v38 = math.random(-shakePower * 10, shakePower * 10)
+          local v39 = math.random(2, 5)
+          local v40 = math.random(-shakePower * 10, shakePower * 10)
+          local v41 = math.random(-rotationRadius, rotationRadius)
+          local v42 = math.random(-shakePower * 10, shakePower * 10)
+
+          humanoidRootPart15.CFrame = head4.CFrame * CFrame.new(v37 + v38 / 10, v39 + v40 / 10, v41 + v42 / 10) * CFrame.Angles(
+            math.rad(math.random(-180, 180)), math.rad(math.random(-180, 180)),
+            math.rad(math.random(-180, 180))
+          )
+
+          task.wait(1 / rotationSpeed)
+        end
+      end)
+    end
+  end,
+})
+
+AddButton(v26, {
+  Name = "- ايـقـاف الـدوران { Loopfling } -",
+  Callback = function() rotationEnabled = false end,
+})
+
+local v43 = 5
+local v44 = 2
+
+AddTextBox(v26, {
+  Name = "- سـرعـة الـدوران -",
+  Default = tostring(v43),
+  PlaceholderText = "مثلاً 5",
+  ClearText = true,
+  Callback = function(value50)
+    local v45 = tonumber(value50)
+
+    if v45 then
+      v43 = v45
+    end
+  end,
+})
+
+AddTextBox(v26, {
+  Name = "- مـسـافـة الـدوران -",
+  Default = tostring(v44),
+  PlaceholderText = "مثلاً 2",
+  ClearText = true,
+  Callback = function(value51)
+    local v46 = tonumber(value51)
+
+    if v46 then
+      v44 = v46
+    end
+  end,
+})
+
+AddButton(v26, {
+  Name = "- اضـغـطِ لـ تـشـغـيـل الـدوران حـول الـلأعـب -",
+  Callback = function()
+    local character14 = findFirstChild6 and findFirstChild6.Character and localPlayer3.Character
+    local humanoidRootPart16, humanoidRootPart17, v47
+
+    if character14 then
+      humanoidRootPart16 = findFirstChild6.Character:FindFirstChild("HumanoidRootPart")
+      humanoidRootPart17 = localPlayer3.Character:FindFirstChild("HumanoidRootPart")
+
+      if humanoidRootPart16 and humanoidRootPart17 then
+        running = true
+        v47 = 0
+
+        task.spawn(function()
+          while running and findFirstChild6 and findFirstChild6.Character
+            and localPlayer3.Character and humanoidRootPart17.Parent do
+            v47 = v47 + v43 * 0.05
+            local v48 = math.cos(v47)
+            local v49 = math.sin(v47)
+            local vector = Vector3.new(v48 * v44, 0, v49 * v44)
+
+            humanoidRootPart17.CFrame = CFrame.lookAt(
+              humanoidRootPart16.Position + vector, humanoidRootPart16.Position
+            )
+
+            task.wait(0.05)
+          end
+        end)
+      end
+    end
+  end,
+})
+
+AddButton(v26, {
+  Name = "- ايـقـاف الـدوران -",
+  Callback = function() running = false end,
+})
+
+local v50 = MakeTab({ Name = "{ تـنـقـلات }" })
+
+AddButton(v50, {
+  Name = "{ تـنـقـلات } ",
+  Callback = function()
+    mouse = players.LocalPlayer:GetMouse()
+
+    tool = Instance.new("Tool")
+    tool.RequiresHandle = false
+    tool.Name = "- اداة تـنـقـل - JG Hub -"
+
+    tool.Activated:connect(function()
+      local v51 = mouse.Hit + Vector3.new(0, 2.5, 0)
+      local cframe = CFrame.new(v51.X, v51.Y, v51.Z)
+      players.LocalPlayer.Character.HumanoidRootPart.CFrame = cframe
+    end)
+
+    tool.Parent = players.LocalPlayer.Backpack
+  end,
+})
+
+AddSlider(v50, {
+  Name = "مـسـافـة تـنـقـل",
+  MinValue = 10,
+  MaxValue = 50,
+  Default = 25,
+  Increase = 1,
+  Callback = function(value52) end,
+})
+
+AddSection(v50, { "{ تـنـقـلات لـ كـامـل الـسـيـرفـر ! }" })
+
+AddButton(v50, {
+  Name = "- الـبـدايـة -",
+  Description = "Teleporta para as coordenadas do Brooks Diner",
+  Callback = function()
+    players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-26, 4, -23)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- وسـط الـشـارع -",
+  Description = "Teleporta para as coordenadas das Casas Inferiores",
+  Callback = function()
+    players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(63, 35, 410)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـسـوبر مـاركـت -",
+  Callback = function()
+    local localPlayer4 = players.LocalPlayer
+    local humanoidRootPart18 = (localPlayer4.Character or localPlayer4.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector2 = Vector3.new(5.9966707229614, 3.349999666214, -119.57402038574)
+    humanoidRootPart18.CFrame = CFrame.new(vector2)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـصـالـون-",
+  Callback = function()
+    local localPlayer5 = players.LocalPlayer
+    local humanoidRootPart19 = (localPlayer5.Character or localPlayer5.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector3 = Vector3.new(-74.303688049316, 3.349999666214, -115.4525604248)
+    humanoidRootPart19.CFrame = CFrame.new(vector3)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- نـادي بـروكـس -",
+  Callback = function()
+    local localPlayer6 = players.LocalPlayer
+    local humanoidRootPart20 = (localPlayer6.Character or localPlayer6.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector4 = Vector3.new(-102.1148223877, 3.349999666214, -113.67855072021)
+    humanoidRootPart20.CFrame = CFrame.new(vector4)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـحـل الـكـيـك -",
+  Callback = function()
+    local localPlayer7 = players.LocalPlayer
+    local humanoidRootPart21 = (localPlayer7.Character or localPlayer7.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector5 = Vector3.new(-127.27175140381, 3.3499991893768, -110.82367706299)
+    humanoidRootPart21.CFrame = CFrame.new(vector5)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- اللألـعـاب الإلـكتـرونـيـة -",
+  Callback = function()
+    local localPlayer8 = players.LocalPlayer
+    local humanoidRootPart22 = (localPlayer8.Character or localPlayer8.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector6 = Vector3.new(-167.56205749512, 3.3499991893768, -109.9040145874)
+    humanoidRootPart22.CFrame = CFrame.new(vector6)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـركـز الـشـرطـة -",
+  Callback = function()
+    local localPlayer9 = players.LocalPlayer
+    local humanoidRootPart23 = (localPlayer9.Character or localPlayer9.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector7 = Vector3.new(-120.09390258789, 3.3411359786987, 8.5234727859497)
+    humanoidRootPart23.CFrame = CFrame.new(vector7)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- فـوق الـنـافـورة -",
+  Callback = function()
+    local localPlayer10 = players.LocalPlayer
+    local humanoidRootPart24 = (localPlayer10.Character or localPlayer10.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector8 = Vector3.new(-26.178421020508, 18.320432662964, 13.945650100708)
+    humanoidRootPart24.CFrame = CFrame.new(vector8)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـمـراجـيـح -",
+  Callback = function()
+    local localPlayer11 = players.LocalPlayer
+    local humanoidRootPart25 = (localPlayer11.Character or localPlayer11.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector9 = Vector3.new(-36.680610656738, 4.5174050331116, 68.764831542969)
+    humanoidRootPart25.CFrame = CFrame.new(vector9)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـمـسـبـح -",
+  Callback = function()
+    local localPlayer12 = players.LocalPlayer
+    local humanoidRootPart26 = (localPlayer12.Character or localPlayer12.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector10 = Vector3.new(-19.860692977905, 3.7231824398041, 115.76072692871)
+    humanoidRootPart26.CFrame = CFrame.new(vector10)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـروضـة -",
+  Callback = function()
+    local localPlayer13 = players.LocalPlayer
+    local humanoidRootPart27 = (localPlayer13.Character or localPlayer13.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector11 = Vector3.new(-127.23048400879, 3.4499909877777, 132.31021118164)
+    humanoidRootPart27.CFrame = CFrame.new(vector11)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـمـسـتـشـفـى -",
+  Callback = function()
+    local localPlayer14 = players.LocalPlayer
+    local humanoidRootPart28 = (localPlayer14.Character or localPlayer14.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector12 = Vector3.new(-302.52090454102, 3.3362486362457, 30.768074035645)
+    humanoidRootPart28.CFrame = CFrame.new(vector12)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـقـبـور -",
+  Callback = function()
+    local localPlayer15 = players.LocalPlayer
+    local humanoidRootPart29 = (localPlayer15.Character or localPlayer15.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector13 = Vector3.new(-473.03723144531, 3.2499990463257, 52.969158172607)
+    humanoidRootPart29.CFrame = CFrame.new(vector13)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـمـدرسـة -",
+  Callback = function()
+    local localPlayer16 = players.LocalPlayer
+    local humanoidRootPart30 = (localPlayer16.Character or localPlayer16.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector14 = Vector3.new(-315.20111083984, 3.4499998092651, 211.51553344727)
+    humanoidRootPart30.CFrame = CFrame.new(vector14)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـمـلـعـب -",
+  Callback = function()
+    local localPlayer17 = players.LocalPlayer
+    local humanoidRootPart31 = (localPlayer17.Character or localPlayer17.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector15 = Vector3.new(-475.55490112305, 3.318838596344, 366.62030029297)
+    humanoidRootPart31.CFrame = CFrame.new(vector15)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـول -",
+  Callback = function()
+    local localPlayer18 = players.LocalPlayer
+    local humanoidRootPart32 = (localPlayer18.Character or localPlayer18.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector16 = Vector3.new(164.3687286377, 3.450001001358, -160.78178405762)
+    humanoidRootPart32.CFrame = CFrame.new(vector16)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- سـيـنـمـا -",
+  Callback = function()
+    local localPlayer19 = players.LocalPlayer
+    local humanoidRootPart33 = (localPlayer19.Character or localPlayer19.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector17 = Vector3.new(207.07525634766, -34.360000610352, -168.90048217773)
+    humanoidRootPart33.CFrame = CFrame.new(vector17)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـعـرض سـيـارات -",
+  Callback = function()
+    local localPlayer20 = players.LocalPlayer
+    local humanoidRootPart34 = (localPlayer20.Character or localPlayer20.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector18 = Vector3.new(6.5174202919006, 3.3499989509583, -340.20220947266)
+    humanoidRootPart34.CFrame = CFrame.new(vector18)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- ورشـة الـتـصـلـيـح -",
+  Callback = function()
+    local localPlayer21 = players.LocalPlayer
+    local humanoidRootPart35 = (localPlayer21.Character or localPlayer21.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector19 = Vector3.new(-71.21768951416, 3.3499987125397, -343.90161132812)
+    humanoidRootPart35.CFrame = CFrame.new(vector19)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـحـطـة الـبـانـزيـن -",
+  Callback = function()
+    local localPlayer22 = players.LocalPlayer
+    local humanoidRootPart36 = (localPlayer22.Character or localPlayer22.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector20 = Vector3.new(113.99508666992, 3.2499997615814, -297.54312133789)
+    humanoidRootPart36.CFrame = CFrame.new(vector20)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـسـوبـر مـاركـت الـصـغـيـر-",
+  Callback = function()
+    local localPlayer23 = players.LocalPlayer
+    local humanoidRootPart37 = (localPlayer23.Character or localPlayer23.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector21 = Vector3.new(142.10339355469, 3.9700005054474, -352.59252929688)
+    humanoidRootPart37.CFrame = CFrame.new(vector21)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـمـطـعـم -",
+  Callback = function()
+    local localPlayer24 = players.LocalPlayer
+    local humanoidRootPart38 = (localPlayer24.Character or localPlayer24.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector22 = Vector3.new(158.81979370117, 4.3500003814697, 37.93098449707)
+    humanoidRootPart38.CFrame = CFrame.new(vector22)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـمـطـار -",
+  Callback = function()
+    local localPlayer25 = players.LocalPlayer
+    local humanoidRootPart39 = (localPlayer25.Character or localPlayer25.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector23 = Vector3.new(336.11315917969, 4.3499965667725, 45.745616912842)
+    humanoidRootPart39.CFrame = CFrame.new(vector23)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـطـائـرة -",
+  Callback = function()
+    local localPlayer26 = players.LocalPlayer
+    local humanoidRootPart40 = (localPlayer26.Character or localPlayer26.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector24 = Vector3.new(447.57345581055, -107.9450378418, 106.31810760498)
+    humanoidRootPart40.CFrame = CFrame.new(vector24)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـبـنـك -",
+  Callback = function()
+    local localPlayer27 = players.LocalPlayer
+    local humanoidRootPart41 = (localPlayer27.Character or localPlayer27.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector25 = Vector3.new(0.95314180850983, 3.349999666214, 250.23526000977)
+    humanoidRootPart41.CFrame = CFrame.new(vector25)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـدخـل خـزنـة الـبـنـك -",
+  Callback = function()
+    local localPlayer28 = players.LocalPlayer
+    local humanoidRootPart42 = (localPlayer28.Character or localPlayer28.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector26 = Vector3.new(-8.3689060211182, 17.60000038147, 255.65989685059)
+    humanoidRootPart42.CFrame = CFrame.new(vector26)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- داخـل خـزنـة الـبـنـك -",
+  Callback = function()
+    local localPlayer29 = players.LocalPlayer
+    local humanoidRootPart43 = (localPlayer29.Character or localPlayer29.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector27 = Vector3.new(-9.1288452148438, 17.649995803833, 269.63192749023)
+    humanoidRootPart43.CFrame = CFrame.new(vector27)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـحـل الـمـلابـس -",
+  Callback = function()
+    local localPlayer30 = players.LocalPlayer
+    local humanoidRootPart44 = (localPlayer30.Character or localPlayer30.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector28 = Vector3.new(-41.049602508545, 3.3499991893768, 247.96368408203)
+    humanoidRootPart44.CFrame = CFrame.new(vector28)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـعـيـادة -",
+  Callback = function()
+    local localPlayer31 = players.LocalPlayer
+    local humanoidRootPart45 = (localPlayer31.Character or localPlayer31.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector29 = Vector3.new(-66.832679748535, 3.2699997425079, 242.19526672363)
+    humanoidRootPart45.CFrame = CFrame.new(vector29)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- عـيـادة الأسـنـان -",
+  Callback = function()
+    local localPlayer32 = players.LocalPlayer
+    local humanoidRootPart46 = (localPlayer32.Character or localPlayer32.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector30 = Vector3.new(-52.580379486084, 20.85000038147, 264.69384765625)
+    humanoidRootPart46.CFrame = CFrame.new(vector30)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- عـيـادة الـحـيـوانـات -",
+  Callback = function()
+    local localPlayer33 = players.LocalPlayer
+    local humanoidRootPart47 = (localPlayer33.Character or localPlayer33.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector31 = Vector3.new(-84.232025146484, 20.849996566772, 266.82009887695)
+    humanoidRootPart47.CFrame = CFrame.new(vector31)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- المـكـتبـة -",
+  Callback = function()
+    local localPlayer34 = players.LocalPlayer
+    local humanoidRootPart48 = (localPlayer34.Character or localPlayer34.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector32 = Vector3.new(-130.2194519043, 3.3499994277954, 249.80213928223)
+    humanoidRootPart48.CFrame = CFrame.new(vector32)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـبـريـد -",
+  Callback = function()
+    local localPlayer35 = players.LocalPlayer
+    local humanoidRootPart49 = (localPlayer35.Character or localPlayer35.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector33 = Vector3.new(-159.94120788574, 3.3499991893768, 256.45587158203)
+    humanoidRootPart49.CFrame = CFrame.new(vector33)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـفـنـدق -",
+  Callback = function()
+    local localPlayer36 = players.LocalPlayer
+    local humanoidRootPart50 = (localPlayer36.Character or localPlayer36.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector34 = Vector3.new(163.61210632324, 4.2499971389771, 230.80735778809)
+    humanoidRootPart50.CFrame = CFrame.new(vector34)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـدخـل الـفـنـدق -",
+  Callback = function()
+    local localPlayer37 = players.LocalPlayer
+    local humanoidRootPart51 = (localPlayer37.Character or localPlayer37.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector35 = Vector3.new(169.50535583496, 4.2499966621399, 258.58068847656)
+    humanoidRootPart51.CFrame = CFrame.new(vector35)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـغـرفـة الأولـى -",
+  Callback = function()
+    local localPlayer38 = players.LocalPlayer
+    local humanoidRootPart52 = (localPlayer38.Character or localPlayer38.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector36 = Vector3.new(266.11529541016, 4.2499966621399, 221.81106567383)
+    humanoidRootPart52.CFrame = CFrame.new(vector36)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـغـرفة الـثـانـيـة -",
+  Callback = function()
+    local localPlayer39 = players.LocalPlayer
+    local humanoidRootPart53 = (localPlayer39.Character or localPlayer39.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector37 = Vector3.new(220.70361328125, 4.2499971389771, 235.82147216797)
+    humanoidRootPart53.CFrame = CFrame.new(vector37)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـغـرفة الـثـالـثـة -",
+  Callback = function()
+    local localPlayer40 = players.LocalPlayer
+    local humanoidRootPart54 = (localPlayer40.Character or localPlayer40.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector38 = Vector3.new(266.37197875977, 21.249996185303, 223.65878295898)
+    humanoidRootPart54.CFrame = CFrame.new(vector38)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـغـرفةالـرابـعـة -",
+  Callback = function()
+    local localPlayer41 = players.LocalPlayer
+    local humanoidRootPart55 = (localPlayer41.Character or localPlayer41.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector39 = Vector3.new(221.75955200195, 21.249996185303, 233.67890930176)
+    humanoidRootPart55.CFrame = CFrame.new(vector39)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـغـرفـة الـخـامـسـة -",
+  Callback = function()
+    local localPlayer42 = players.LocalPlayer
+    local humanoidRootPart56 = (localPlayer42.Character or localPlayer42.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector40 = Vector3.new(158.14385986328, 21.249988555908, 235.76208496094)
+    humanoidRootPart56.CFrame = CFrame.new(vector40)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- محـطـة مـتـرو الـمـديـنـة الأول -",
+  Callback = function()
+    local localPlayer43 = players.LocalPlayer
+    local humanoidRootPart57 = (localPlayer43.Character or localPlayer43.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector41 = Vector3.new(63.615333557129, -21.350004196167, 54.889293670654)
+    humanoidRootPart57.CFrame = CFrame.new(vector41)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـحـطـة مـتـرو الـمـديـنـة الـثـانـي -",
+  Callback = function()
+    local localPlayer44 = players.LocalPlayer
+    local humanoidRootPart58 = (localPlayer44.Character or localPlayer44.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector42 = Vector3.new(-222.43780517578, -20.975160598755, 378.34527587891)
+    humanoidRootPart58.CFrame = CFrame.new(vector42)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـحـطـة مـتـرو الـمـديـنـة الـثـالـث -",
+  Callback = function()
+    local localPlayer45 = players.LocalPlayer
+    local humanoidRootPart59 = (localPlayer45.Character or localPlayer45.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector43 = Vector3.new(-200.89926147461, 41.624835968018, -453.11672973633)
+    humanoidRootPart59.CFrame = CFrame.new(vector43)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـحـطـة مـتـرو الـغـابـة -",
+  Callback = function()
+    local localPlayer46 = players.LocalPlayer
+    local humanoidRootPart60 = (localPlayer46.Character or localPlayer46.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector44 = Vector3.new(-205.04634094238, 41.624839782715, -452.07717895508)
+    humanoidRootPart60.CFrame = CFrame.new(vector44)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- بـيـت الـغـابـة -",
+  Callback = function()
+    local localPlayer47 = players.LocalPlayer
+    local humanoidRootPart61 = (localPlayer47.Character or localPlayer47.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector45 = Vector3.new(-212.94030761719, 3.224841594696, 1066.0477294922)
+    humanoidRootPart61.CFrame = CFrame.new(vector45)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـسـفـيـنـة -",
+  Callback = function()
+    local localPlayer48 = players.LocalPlayer
+    local humanoidRootPart62 = (localPlayer48.Character or localPlayer48.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector46 = Vector3.new(-115.78674316406, 22.947259902954, 868.76776123047)
+    humanoidRootPart62.CFrame = CFrame.new(vector46)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـبـحـر -",
+  Callback = function()
+    local localPlayer49 = players.LocalPlayer
+    local humanoidRootPart63 = (localPlayer49.Character or localPlayer49.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector47 = Vector3.new(63.328475952148, 4.2248420715332, 1582.8435058594)
+    humanoidRootPart63.CFrame = CFrame.new(vector47)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـشـلال -",
+  Callback = function()
+    local localPlayer50 = players.LocalPlayer
+    local humanoidRootPart64 = (localPlayer50.Character or localPlayer50.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector48 = Vector3.new(-378.48583984375, 0.54564595222473, 903.74334716797)
+    humanoidRootPart64.CFrame = CFrame.new(vector48)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- الـمـزرعـة -",
+  Callback = function()
+    local localPlayer51 = players.LocalPlayer
+    local humanoidRootPart65 = (localPlayer51.Character or localPlayer51.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart")
+    local vector49 = Vector3.new(-844.56475830078, 3.224841594696, -407.54547119141)
+    humanoidRootPart65.CFrame = CFrame.new(vector49)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـقـر الأسـلـحـة -",
+  Description = "Teleporta para as coordenadas do Criminal",
+  Callback = function()
+    players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-119, -28, 235)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- بـيـت الـمـهـجـور -",
+  Description = "Teleporta para as coordenadas da Casa Abandonada",
+  Callback = function()
+    players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(986, 4, 63)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـكـان الـكـهـربـاء -",
+  Description = "Teleporta para as coordenadas da Agência",
+  Callback = function()
+    players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(179, 4, -464)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- مـكـان سـري -",
+  Description = "Teleporta para as coordenadas do Portal da Agência",
+  Callback = function()
+    players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(672, 4, -296)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- تـحـت الأرض -",
+  Description = "Teleporta para as coordenadas do Local Secreto",
+  Callback = function()
+    players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(505, -75, 143)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- تـحـت الأرض -",
+  Description = "Teleporta para as coordenadas da Sala Secreta na Oficina",
+  Callback = function()
+    players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 4, -495)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- تـحـت الأرض -",
+  Description = "Teleporta para as coordenadas da Sala Secreta 2",
+  Callback = function()
+    players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-343, 4, -613)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- فـوگ الـجـبـل -",
+  Description = "Teleporta para as coordenadas da Montanha 1",
+  Callback = function()
+    players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-670, 251, 765)
+  end,
+})
+
+AddButton(v50, {
+  Name = "- فـوگ الـجـسـر -",
+  Description = "Teleporta para as coordenadas do Arco",
+  Callback = function()
+    players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-589, 141, -59)
+  end,
+})
+
+local v52 = MakeTab({ Name = "{ الـبـيـت }" })
+AddSection(v52, { "أوامـر لـ تـحـكـم فـي الـبـيـت " })
+local value53 = "fgijvcdeool"
+local v53 = 11
+
+AddTextBox(v52, {
+  Name = "- ادخـل اسـم الأعـب أو اسـمـكِ الـكـامـل -",
+  Default = "",
+  PlaceholderText = "هـنـا",
+  ClearText = true,
+  Callback = function(value54)
+    value53 = Value
+    print("Entered player name: " .. value53)
+  end,
+})
+
+AddTextBox(v52, {
+  Name = "- ادخـل رقـم الـبـيـت -",
+  Default = "",
+  PlaceholderText = "هـنـا",
+  ClearText = true,
+  Callback = function(value55)
+    v53 = tonumber(Value) or 11
+    print("Entered number value: " .. tostring(v53))
+  end,
+})
+
+AddButton(v52, {
+  Name = "- اخـذ تـحـكـم - ",
+  Callback = function()
+    local findFirstChild7 = players:FindFirstChild(value53)
+
+    if findFirstChild7 then
+      replicatedStorage.RE:FindFirstChild("1Playe1rTrigge1rEven1t"):FireServer(unpack({
+        "GivePermissionLoopToServer", findFirstChild7, v53,
+      }))
+
+      print("Event fired for player: " .. value53 .. " with value: " .. tostring(v53))
+    else
+      print("Player not found.")
+    end
+  end,
+})
+
+AddButton(v52, {
+  Name = "- بـيـت مـلـون { Rainbow } -",
+  Callback = function()
+    local findFirstChild8 = replicatedStorage.RE:FindFirstChild("1Player1sHous1e")
+
+    local v54 = {
+      Color3.fromRGB(255, 0, 0), Color3.fromRGB(0, 255, 0), Color3.fromRGB(0, 0, 255),
+      Color3.fromRGB(255, 255, 0), Color3.fromRGB(255, 165, 0), Color3.fromRGB(75, 0, 130),
+      Color3.fromRGB(238, 130, 238), Color3.fromRGB(128, 0, 128),
+    }
+
+    while true do
+      for key11, value56 in pairs(v54) do
+        findFirstChild8:FireServer(unpack({ "ColorPickHouse", value56 }))
+        wait(1)
+      end
+    end
+  end,
+})
+
+AddButton(v52, {
+  Name = "- شـيـل الـطـرد مـن كـل الـبـيـوت -",
+  Callback = function()
+    local bannedLots = replicatedStorage:FindFirstChild("BannedLots")
+
+    if bannedLots then
+      bannedLots:Destroy()
+      print("BannedLots folder has been deleted.")
+    else
+      print("BannedLots folder not found.")
+    end
+  end,
+})
+
+local v55 = false
+
+local function f9(p6, canCollide2)
+  for index5, value57 in ipairs(p6:GetDescendants()) do
+    if value57:IsA("BasePart") then
+      value57.CanCollide = canCollide2
+    end
+  end
+end
+
+-- https://discord.gg/AwGHNh7Z7T
+AddToggle(v52, {
+  Name = "شـيـل الـطـرد ",
+  Default = false,
+  Callback = function(value58)
+    v55 = value58
+    print("Noclip Enabled:", v55)
+    local character15 = players.LocalPlayer.Character
+
+    if v55 then
+      noclipLoop = runService.Stepped:Connect(function()
+        if character15 then
+          f9(character15, false)
+        end
+      end)
+    else
+      if noclipLoop then
+        noclipLoop:Disconnect()
+      end
+
+      if character15 then
+        f9(character15, true)
+      end
+    end
+  end,
+})
+
+AddButton(v52, {
+  Name = "- فـتـح واغـلاق كـراج الـبـيـت -",
+  Callback = function() replicatedStorage.RE["1Player1sHous1e"]:FireServer("GarageDoor") end,
+})
+
+AddButton(v52, {
+  Name = "- فـتـح واغـلاق شـبـابـيـك الـبـيـت -",
+  Callback = function() replicatedStorage.RE["1Player1sHous1e"]:FireServer("Curtains") end,
+})
+
+AddButton(v52, {
+  Name = "- فـتـح واغـلاق بـاب الـبـيـت -",
+  Callback = function() replicatedStorage.RE["1Player1sHous1e"]:FireServer("LockDoors") end,
+})
+
+local v56 = MakeTab({ Name = "{ أدوات }" })
+
+AddSection(v56, {
+  "{ اضـغـطِ لـ حـصـول عـلـى الأدوات الاتـيـه } ",
+})
+
+AddButton(v56, {
+  Name = "- احـصـلِ عـلـى { كـنـبـه } -",
+  Callback = function()
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(
+      "PickingTools", "Couch"
+    )
+  end,
+})
+
+AddButton(v56, {
+  Name = "- احـصـلِ عـلـى { شـجـره } -",
+  Callback = function()
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(
+      "PickingTools", "Tree"
+    )
+  end,
+})
+
+AddButton(v56, {
+  Name = "- احـصـلِ عـلـى { مـسـدس الـبـيـض } -",
+  Callback = function()
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(
+      "PickingTools", "EggLauncher"
+    )
+  end,
+})
+
+AddButton(v56, {
+  Name = "- احـصـلِ عـلـى { كـرسـتـال يـضـيء } -",
+  Callback = function()
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(
+      "PickingTools", "Crystal"
+    )
+  end,
+})
+
+AddButton(v56, {
+  Name = "- احـصـلِ عـلـى { مـخـالـب تـضـيء } -",
+  Callback = function()
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(
+      "PickingTools", "Crystals"
+    )
+  end,
+})
+
+AddButton(v56, {
+  Name = "- احـصـلِ عـلـى { لـوحـة سـوداء } -",
+  Callback = function()
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(
+      "PickingTools", "SignBlack"
+    )
+  end,
+})
+
+AddButton(v56, {
+  Name = "- احـصـلِ عـلـى { لـوحـة حـمـراء } -",
+  Callback = function()
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(
+      "PickingTools", "SignRed"
+    )
+  end,
+})
+
+AddButton(v56, {
+  Name = "- احـصـلِ عـلـى { لـوحـة ورديـة } -",
+  Callback = function()
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(
+      "PickingTools", "SignPink"
+    )
+  end,
+})
+
+AddButton(v56, {
+  Name = "- احـصـلِ عـلـى { لـيـمـونادا } -",
+  Callback = function()
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(
+      "PickingTools", "Lemonade"
+    )
+  end,
+})
+
+local v57 = MakeTab({ Name = "{ سـكـربـتـات }" })
+AddSection(v57, { "سـكـربـتـات مـتـنـوعـة :" })
+
+AddButton(v57, {
+  Name = "- سـكـربـت - طـيـران سـيـارة -",
+  Callback = function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Android-vfly-24974"))()
+  end,
+})
+
+AddButton(v57, {
+  Name = "- سـكـربـت - رقـصـات -",
+  Callback = function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Baseplate-Fe-All-Emote-7386"))()
+  end,
+})
+
+AddButton(v57, {
+  Name = "- سـكـربـت - جـودة -",
+  Callback = function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-pshade-ultimate-25505"))()
+  end,
+})
+
+AddButton(v57, {
+  Name = "- سـكـربـت - FPS -",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vexroxd/My-Script-/main/roblox%20fps%20unlocker%20script.lua"))()
+  end,
+})
+
+AddButton(v57, {
+  Name = "- سـكـربـت - R4D -",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script"))()
+  end,
+})
+
+AddButton(v57, {
+  Name = "- سـكـربـت - R6 -",
+  Callback = function()
+    loadstring(game:HttpGet(
+      "https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua", true
+    ))()
+  end,
+})
+
+AddButton(v57, {
+  Name = "- سـكـربـت الـهـلال - الـرحـمـة -",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
+  end,
+})
+
+AddButton(v57, {
+  Name = "- سـكـربـت - Rochips Universal -",
+  Callback = function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-rochips-universal-18294"))()
+  end,
+})
+
+AddButton(v57, {
+  Name = "- سـكـربـت يـقـتـل الـنـاس ب كـنـبـه -",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
+  end,
+})
+
+AddButton(v57, {
+  Name = "- سـكـربـت قـتـل و سـحــب -",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/BrookHaven%20TvonHub"))()
+  end,
+})
+
+AddButton(v57, {
+  Name = "- سـكـربـت يـطـيـر اي احـد يـفـعـل عـلـيك -",
+  Callback = function()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-FE-Fling-GUI-10927"))()
+  end,
+})
+
+AddButton(v57, {
+  Name = "- سـكـربـت مـحـد يـقـدر يـطـيـرك -",
+  Callback = function()
+    loadstring(game:HttpGet(
+      "https://raw.githubusercontent.com/zephyr10101/ignore-touchinterests/main/main", true
+    ))()
+  end,
+})
+
+local v58 = MakeTab({ Name = "{ صـمـلات }" })
+AddSection(v58, { "سـكـربـتـات لـ صـمـلاويـن تـفـيـدكـم : " })
+
+AddButton(v58, {
+  Name = "- سـكـربـت - Infinite Yield -",
+  Callback = function()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Infinite-Yield_500"))()
+  end,
+})
+
+AddButton(v58, {
+  Name = "- سـكـربـت - Nameless Admin -",
+  Callback = function()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Nameless-Admin-no-byfron-ui-11288"))()
+  end,
+})
+
+AddButton(v58, {
+  Name = "- سـكـربـت - AntiAfk -",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ArgetnarYT/scripts/main/AntiAfk2.lua"))()
+  end,
+})
+
+AddButton(v58, {
+  Name = "- سـكـربـت - AntiAfk {2} -",
+  Callback = function()
+    loadstring(game:HttpGet(
+      "https://raw.githubusercontent.com/evxncodes/mainroblox/main/anti-afk", true
+    ))()
+  end,
+})
+
+AddButton(v58, {
+  Name = "- سـكـربـت - AntiAfk {3} -",
+  Callback = function()
+    loadstring(game:HttpGet(
+      "https://raw.githubusercontent.com/batusz/main/roblox/__Anti__Afk__Script__", true
+    ))()
+  end,
+})
+
+AddButton(v58, {
+  Name = "- سـكـربـت - AntiAfk {4} -",
+  Callback = function()
+    loadstring(game:HttpGet(
+      "https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringypVvhJBq4QNz",
+      true
+    ))()
+  end,
+})
+
+AddButton(v58, {
+  Name = "- سـكـربـت - AntiAfk {5} -",
+  Callback = function() loadstring(game:HttpGet("https://zxfolix.github.io/antiafk.lua"))() end,
+})
+
+AddButton(v58, {
+  Name = "- سـكـربـت - AntiAfk {6} -",
+  Callback = function()
+    loadstring(game:HttpGet(
+      "https://raw.githubusercontent.com/RTrade/Voidz/main/AntiAFK.lua", true
+    ))()
+  end,
+})
+
+AddButton(v58, {
+  Name = "- سـكـربـت - AutoClicker -",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/AutoClicker"))()
+  end,
+})
+
+local v59 = MakeTab({ Name = "{ قـيـم بـاسـات }" })
+
+AddButton(v59, {
+  Name = "- اضـغـطِ لـ اخـذ - { VIP } -",
+  Callback = function()
+    starterGui:SetCore("SendNotification", {
+      Title = "تـم صـار عـنـدكِ - {شـات VIP } ",
+      Text = "",
+      Icon = "rbxassetid://85102932341647",
+    })
+
+    Duration = 5
+
+    local v60 = game
+    v60:GetService("Players").LocalPlayer.PlayersBag.VIP.Value = true
+  end,
+})
+
+AddButton(v59, {
+  Name = "- اضـغـطِ لـ اخـذ - { نـجـمـة } -",
+  Callback = function()
+    starterGui:SetCore("SendNotification", {
+      Title = "تـم صـار عـنـدكِ - { نـجـمـة } ",
+      Text = "",
+      Icon = "rbxassetid://100893456751976",
+    })
+
+    Duration = 5
+
+    local v61 = game
+    v61:GetService("Players").LocalPlayer.PlayersBag.SilverPass.Value = true
+  end,
+})
+
+AddButton(v59, {
+  Name = "- اضـغـطِ لـ اخـذ - { سـرعـه } -",
+  Callback = function()
+    starterGui:SetCore("SendNotification", {
+      Title = "تـم صـار عـنـدكِ -  { سـرعه } ",
+      Text = "",
+      Icon = "rbxassetid://127553905855586",
+    })
+
+    Duration = 5
+
+    local v62 = game
+    v62:GetService("Players").LocalPlayer.PlayersBag.SpeedPass200.Value = true
+  end,
+})
+
+AddButton(v59, {
+  Name = "- اضـغـطِ لـ اخـذ - { اغـانـي } -",
+  Callback = function()
+    starterGui:SetCore("SendNotification", {
+      Title = "تـم صـار عـنـدكِ - { اغـانـي } ",
+      Text = "",
+      Icon = "rbxassetid://77765073982300",
+    })
+
+    Duration = 5
+
+    local v63 = game
+    v63:GetService("Players").LocalPlayer.PlayersBag.MusicPass.Value = true
+  end,
+})
+
+local v64 = MakeTab({ Name = "{ اغـانـي }" })
+
+AddSection(v64, {
+  "اضـغـط ل وضع كـود اغـنـيـة بـ سـكـيـت بـورد",
+})
+
+AddTextBox(v64, {
+  Name = "ادخـل كود اغـنـيـة هـنـا",
+  Default = "",
+  PlaceholderText = "ادخـل كـود اغـنـيـة سكيت بورد",
+  ClearText = true,
+  Callback = function(value59)
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack({
+      "SkateBoard",
+    }))
+
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack({
+      "PickingScooterMusicText", value59,
+    }))
+  end,
+})
+
+AddSection(v64, { "اضـغـط ل وضع كـود اغـنـيـة بـ سـيـارة" })
+
+AddTextBox(v64, {
+  Name = "ادخـل كـود اغـنـيـة هـنـا",
+  Default = "",
+  PlaceholderText = "ادخـل كـود اغـنـيـة سـيـارة ",
+  ClearText = true,
+  Callback = function(value60)
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack({
+      "SkateBoard",
+    }))
+
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack({
+      "PickingScooterMusicText", value60,
+    }))
+  end,
+})
+
+AddSection(v64, { "اضـغـط ل وضع كـود اغـنـيـة بـ بـيـت" })
+
+AddTextBox(v64, {
+  Name = "ادخـل كـود اغـنـيـة هـنـا ",
+  Default = "",
+  PlaceholderText = "ادخـل كـود اغـنـيـة بـيـت",
+  ClearText = true,
+  Callback = function(value61)
+    replicatedStorage:WaitForChild("RE"):WaitForChild("1Player1sHous1e"):FireServer(unpack({
+      "PickHouseMusicText", value61,
+    }))
+  end,
+})
+
+AddSection(v64, {
+  "اكـواد اغـانـي عـشـوائـيه عـراقـيـه + اجــنـبـيـة + بـرازيـلـيـلة + اسـبـانـية و هـواي : ",
+})
+
+local v65 = {
+  ["{1}"] = "115706769924729",
+  ["{2}"] = "88171709821894",
+  ["{3}"] = "93218265275853",
+  ["{4}"] = "134148896256888",
+  ["{5}"] = "88064647826500",
+  ["{6}"] = "133042384034258",
+  ["{7}"] = "130467285446008",
+  ["{8}"] = "4924607176",
+  ["{9}"] = "93620598835551",
+  ["{10}"] = "86271123924168",
+  ["{11}"] = "98224127892587",
+  ["{12}"] = "76578817848504",
+  ["{13}"] = "7772388444",
+  ["{14}"] = "5849978429",
+  ["{15}"] = "4776398821",
+  ["{16}"] = "7067700233",
+  ["{17}"] = "153619739",
+  ["{18}"] = "15294026484",
+  ["{19}"] = "152055700",
+  ["{20}"] = "12885233572",
+  ["{21}"] = "16190784875",
+  ["{22}"] = "1842095470",
+  ["{23}"] = "1845937641",
+  ["{24}"] = "16190782786",
+  ["{25}"] = "121709282025946",
+  ["{26}"] = "16190782181",
+  ["{27}"] = "18841896412",
+  ["{28}"] = "18841892305",
+  ["{29}"] = "18841891575",
+  ["{30}"] = "76698985299412",
+  ["{31}"] = "72440232513341",
+  ["{32}"] = "71091537428596",
+  ["{33}"] = "139477537381956",
+  ["{34}"] = "71609631244271",
+  ["{35}"] = "124241085170176",
+  ["{36}"] = "123485897576794",
+  ["{37}"] = "70496839086003",
+  ["{38}"] = "99959126422360",
+  ["{39}"] = "114101102913882",
+  ["{40}"] = "113702566779842",
+  ["{41}"] = "85481949732828",
+  ["{42}"] = "89907278904871",
+  ["{43}"] = "138322576564862",
+  ["{44}"] = "127665886963153",
+  ["{45}"] = "128160301925301",
+  ["{46}"] = "77405600154092",
+  ["{47}"] = "105854178411388",
+  ["{48}"] = "101124692839711",
+  ["{49}"] = "114110675322712",
+  ["{50}"] = "16190783444",
+  ["{51}"] = "111793458276752",
+  ["{52}"] = "82440797316721",
+  ["{53}"] = "89475575911455",
+  ["{54}"] = "84774528883336",
+  ["{55}"] = "128214703292900",
+  ["{56}"] = "124394293950763",
+  ["{57}"] = "115566310065371",
+  ["{58}"] = "105128277324257",
+  ["{59}"] = "127858584011239",
+  ["{60}"] = "138494446242504",
+  ["{61}"] = "88736029194269",
+  ["{62}"] = "75038862482887",
+  ["{63}"] = "107421761958790",
+  ["{64}"] = "72444649335619",
+  ["{65}"] = "81902909302285",
+  ["{66}"] = "92270747179845",
+  ["{67}"] = "126265599978689",
+  ["{68}"] = "80511230354401",
+  ["{69}"] = "73140398421340",
+  ["{70}"] = "85476578117209",
+  ["{71}"] = "93218265275853",
+  ["{72}"] = "77874619166101",
+  ["{73}"] = "110664193056681",
+  ["{74}"] = "127356583789936",
+  ["{75}"] = "112358169025453",
+  ["{76}"] = "98395298022855",
+  ["{77}"] = "93782728519019",
+  ["{78}"] = "81583090974064",
+  ["{79}"] = "76463442516219",
+  ["{80}"] = "72720212660446",
+  ["{81}"] = "130407701722022",
+  ["{82}"] = "93786060174790",
+  ["{83}"] = "135667903253566",
+  ["{84}"] = "96809235552684",
+  ["{85}"] = "99932554275105",
+  ["{86}"] = "117821224226621",
+  ["{87}"] = "71609631244271",
+  ["{88}"] = "110519234838026",
+  ["{89}"] = "88766083263747",
+  ["{90}"] = "85684522965208",
+  ["{91}"] = "110524647114903",
+  ["{92}"] = "110519234838026",
+  ["{93}"] = "119437864395329",
+  ["{94}"] = "101543940535825",
+  ["{95}"] = "116711423687898",
+  ["{96}"] = "106317184644394",
+  ["{97}"] = "137160480186369",
+  ["{98}"] = "13530438045",
+  ["{99}"] = "7266848743",
+  ["{100}"] = "135308045",
+}
+
+local function f10()
+  local v66 = {}
+
+  for i = 1, 100 do
+    table.insert(v66, "{" .. i .. "}")
+  end
+
+  return v66
+end
+
+local v67
+
+AddDropdown(v64, {
+  Name = "اخـتـارِ الـكـود",
+  Options = f10(),
+  Callback = function(value62) v67 = value62 end,
+  codes = v65,
+})
+
+AddButton(v64, {
+  Name = "تـشـغـيـل الـكـود",
+  Callback = function()
+    if not v67 then
+      warn("لم يتم اختيار كود موسيقى")
+      return
+    else
+      local v68 = v65[v67]
+
+      if v68 then
+        local findFirstChild9 = replicatedStorage.RE:FindFirstChild("1NoMoto1rVehicle1s")
+
+        if findFirstChild9 then
+          findFirstChild9:FireServer("SkateBoard")
+          findFirstChild9:FireServer("PickingScooterMusicText", v68)
+        else
+          warn("الحدث غير موجود")
+        end
+      else
+        warn("كود الموسيقى غير موجود")
+      end
+
+      return
+    end
+  end,
+})
+
+AddSection(v64, {
+  "راح اضـيـف اكـواد اكـثـر ب تـحـديـثات الـقـادمـة",
+})
+
+local v69 = MakeTab({ Name = "{ سـكـنـات }" })
+local localPlayer52 = players.LocalPlayer
+
+local function f11()
+  local v70 = {}
+
+  for index6, value63 in ipairs(players:GetPlayers()) do
+    if value63 ~= localPlayer52 then
+      table.insert(v70, value63.Name)
+    end
+  end
+
+  return v70
+end
+
+local remotes = replicatedStorage:WaitForChild("Remotes")
+local v71 = f11()
+local addDropdown2 = AddDropdown
+local v72
+
+local v73 = addDropdown2(v69, {
+  Name = "اضـغـطِ لـ اخـتـيـار الـلاعـب : ",
+  Options = v71,
+  Default = v71[1] or "",
+  Callback = function(value64) v72 = value64 end,
+})
+
+local function f12()
+  local v74 = f11()
+  v73:Set(v74)
+
+  if #v74 > 0 then
+    v72 = v74[1]
+  end
+end
+
+players.PlayerAdded:Connect(f12)
+players.PlayerRemoving:Connect(f12)
+
+AddButton(v69, {
+  Name = "اضـغـطِ لـ نـسـخ سـكـن الـلاعـب : ",
+  Callback = function()
+    if not v72 then
+      return
+    else
+      local character16 = localPlayer52.Character
+      local findFirstChild10 = players:FindFirstChild(v72)
+
+      if not (findFirstChild10 and findFirstChild10.Character) then
+        return
+      else
+        local humanoid10 = character16:FindFirstChildOfClass("Humanoid")
+        local humanoid11 = findFirstChild10.Character:FindFirstChildOfClass("Humanoid")
+
+        if not (humanoid10 and humanoid11) then
+          return
+        else
+          local getAppliedDescription = humanoid10:GetAppliedDescription()
+
+          for index7, value65 in ipairs(getAppliedDescription:GetAccessories(true)) do
+            if value65.AssetId and tonumber(value65.AssetId) then
+              remotes.Wear:InvokeServer(tonumber(value65.AssetId))
+              task.wait(0.2)
+            end
+          end
+
+          if tonumber(getAppliedDescription.Shirt) then
+            remotes.Wear:InvokeServer(tonumber(getAppliedDescription.Shirt))
+            task.wait(0.2)
+          end
+
+          if tonumber(getAppliedDescription.Pants) then
+            remotes.Wear:InvokeServer(tonumber(getAppliedDescription.Pants))
+            task.wait(0.2)
+          end
+
+          if tonumber(getAppliedDescription.Face) then
+            remotes.Wear:InvokeServer(tonumber(getAppliedDescription.Face))
+            task.wait(0.2)
+          end
+
+          local getAppliedDescription2 = humanoid11:GetAppliedDescription()
+
+          remotes.ChangeCharacterBody:InvokeServer({
+            {
+              getAppliedDescription2.Torso, getAppliedDescription2.RightArm,
+              getAppliedDescription2.LeftArm, getAppliedDescription2.RightLeg,
+              getAppliedDescription2.LeftLeg, getAppliedDescription2.Head,
+            },
+          })
+
+          task.wait(0.5)
+
+          if tonumber(getAppliedDescription2.Shirt) then
+            remotes.Wear:InvokeServer(tonumber(getAppliedDescription2.Shirt))
+            task.wait(0.3)
+          end
+
+          if tonumber(getAppliedDescription2.Pants) then
+            remotes.Wear:InvokeServer(tonumber(getAppliedDescription2.Pants))
+            task.wait(0.3)
+          end
+
+          if tonumber(getAppliedDescription2.Face) then
+            remotes.Wear:InvokeServer(tonumber(getAppliedDescription2.Face))
+            task.wait(0.3)
+          end
+
+          for index8, value66 in ipairs(getAppliedDescription2:GetAccessories(true)) do
+            if value66.AssetId and tonumber(value66.AssetId) then
+              remotes.Wear:InvokeServer(tonumber(value66.AssetId))
+              task.wait(0.3)
+            end
+          end
+
+          local bodyColors = findFirstChild10.Character:FindFirstChild("Body Colors")
+
+          if bodyColors then
+            remotes.ChangeBodyColor:FireServer(tostring(bodyColors.HeadColor))
+            task.wait(0.3)
+          end
+
+          if tonumber(getAppliedDescription2.IdleAnimation) then
+            remotes.Wear:InvokeServer(tonumber(getAppliedDescription2.IdleAnimation))
+            task.wait(0.3)
+          end
+
+          local playersBag = findFirstChild10:FindFirstChild("PlayersBag")
+
+          if playersBag then
+            if playersBag:FindFirstChild("RPName") and playersBag.RPName.Value ~= "" then
+              remotes.RPNameText:FireServer("RolePlayName", playersBag.RPName.Value)
+              task.wait(0.3)
+            end
+
+            if playersBag:FindFirstChild("RPBio") and playersBag.RPBio.Value ~= "" then
+              remotes.RPNameText:FireServer("RolePlayBio", playersBag.RPBio.Value)
+              task.wait(0.3)
+            end
+
+            if playersBag:FindFirstChild("RPNameColor") then
+              remotes.RPNameColor:FireServer("PickingRPNameColor", playersBag.RPNameColor.Value)
+              task.wait(0.3)
+            end
+
+            if playersBag:FindFirstChild("RPBioColor") then
+              remotes.RPNameColor:FireServer("PickingRPBioColor", playersBag.RPBioColor.Value)
+              task.wait(0.3)
+            end
+          end
+
+          return
+        end
+      end
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "تـحـديـث قـائـمـة الـلاعـبـيـن",
+  Callback = function() f12() end,
+})
+
+AddSection(v69, { "{ فـرع سـكـنـات بـنـات تـنـسـيـقـي }" })
+
+AddButton(v69, {
+  Name = "- سـكـن بـنـت گـلامـور -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      115745153758680, 76683091425509, 75159926897589, 0, 0, 14960720067,
+    })
+
+    for index9, value67 in ipairs({
+      2735240888, 113749281926930, 120996397463890, 15461112727, 13153798277, 91764783976162,
+      17577949104, 17744851762, 139844681686460, 101521377229190, 77745292670615,
+      137774587072189, 82117306117807, 14592692650,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value67)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- سـكـن بـنـت بـيـجـي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      115745153758680, 76683091425509, 75159926897589, 0, 0, 14960720067,
+    })
+
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeBodyColor"):FireServer("Institutional white")
+
+    for index10, value68 in ipairs({
+      9207509028, 104558184738792, 110138817602300, 13154853938, 13900309877, 95247705739438,
+      17577949104, 17559967541, 78625340992085, 6323672306, 133739083878130, 15936091685,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value68)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- سـكـن بـنـت بـنـي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      115745153758680, 76683091425509, 75159926897589, 0, 0, 14960720067,
+    })
+
+    for index11, value69 in ipairs({
+      5948747896, 12438103773, 13153798277, 8275222163, 17577949104, 17744851762,
+      113450227769860, 11984368310, 10473499273, 17247595220, 82117306117807, 12483105503,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value69)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- سـكـن بـنـت وردي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      115745153758680, 76683091425509, 75159926897589, 0, 0, 14960720067,
+    })
+
+    for index12, value70 in ipairs({
+      100584662788680, 82125900044946, 12145754469, 70449108798560, 138578095847420,
+      132270791472590, 13154819267, 10714603421, 17744851762, 13900309877, 6445187498,
+      12727899468,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value70)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- سـكـن بـنـت وردي {2} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      115745153758680, 76683091425509, 75159926897589, 139607718, 0, 14960720067,
+    })
+
+    for index13, value71 in ipairs({
+      12491799299, 12320559736, 14398986629, 10868131140, 15701269099, 15258757346,
+      133328016919890, 75456487243472, 13153798277, 91764783976162, 10714603421, 17744851762,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value71)
+    end
+  end,
+})
+
+AddSection(v69, { "{ فـرع سـكـنـات اولاد تـنـسـيـقـي }" })
+
+AddButton(v69, {
+  Name = "- سـكـن ولـد أسـود -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      4637265517, 0, 0, 139607718, 0, 14960720067,
+    })
+
+    for index14, value72 in ipairs({
+      12324916270, 12399304406, 12320559736, 15294026484, 15530783724, 15848163279, 15618243532,
+      12553856439, 6140709264, 5375274460, 11666244695, 18907115656,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value72)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- سـكـن ولـد ابـيـض -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      4637265517, 0, 0, 139607718, 0, 14960720067,
+    })
+
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeBodyColor"):FireServer("Institutional white")
+
+    for index15, value73 in ipairs({
+      71561979890902, 14884031293, 12491790283, 12320557577, 16727932178, 17578973282,
+      11666241096, 18907051894, 15294026484, 15530783724, 15848163279, 15618243532, 12553856439,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value73)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- سـكـن ولـد احـمـر -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      4637265517, 0, 0, 139607718, 0, 14960720067,
+    })
+
+    for index16, value74 in ipairs({
+      12258163872, 12886633010, 12399296368, 12320559736, 18349876491, 12563952028,
+      131767886983910, 15294026484, 15530783724, 15848163279, 15618243532, 12553856439,
+      5375274460,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value74)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- سـكـن ولـد اخـضـر -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      4637265517, 0, 0, 139607718, 0, 14960720067,
+    })
+
+    for index17, value75 in ipairs({
+      15294026484, 15530783724, 15848163279, 15618243532, 12553856439, 5375274460, 15654736913,
+      16632862946, 12406845750, 83065690630260, 12886618098, 12300914679,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value75)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- سـكـن ولـد حـلـو -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      4637265517, 0, 0, 139607718, 0, 14960720067,
+    })
+
+    for index18, value76 in ipairs({
+      15294026484, 15530783724, 15848163279, 15618243532, 12553856439, 12320559736, 15294026484,
+      15519708781, 15848163279, 15618243532, 16127830905, 16729315650, 116918306368650,
+      121191734883060, 73342575980321, 12719043468, 8902806997, 12399304406, 12324916270,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value76)
+    end
+  end,
+})
+
+AddSection(v69, { "{ فـرع طـقـم الـتـنـيـن تـنـسـيـقـي }" })
+
+AddButton(v69, {
+  Name = "- طـقـم الـتـنـيـن الابـيـض بـنـاتـي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      115745153758680, 76683091425509, 75159926897589, 0, 0, 14960720067,
+    })
+
+    for index19, value77 in ipairs({
+      17321153635, 17486162984, 13153798277, 10714603421, 89320309255381, 17744851762,
+      17885542271, 6323672306, 9207509028, 12642699915, 17812777774, 12491805479,
+      133739083878130, 71523705002059,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value77)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- طـقـم الـتـنـيـن الأسـود ولادي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      4637265517, 0, 0, 0, 0, 14960720067,
+    })
+
+    for index20, value78 in ipairs({
+      18203491026, 15294026484, 15848163279, 15530783724, 15618243532, 12553856439,
+      82015366838137, 18164942938, 17330476501, 17812757369, 12324916270, 12871866840,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value78)
+    end
+  end,
+})
+
+AddSection(v69, { "{ فـرع طـقـم الـسـجـن تـنـسـيـقـي }" })
+
+AddButton(v69, {
+  Name = "- طـقـم سـجـن بـنـاتـي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      115745153758680, 76683091425509, 75159926897589, 0, 0, 14960720067,
+    })
+
+    for index21, value79 in ipairs({
+      120198965886750, 13854533501, 13153798277, 10714603421, 89320309255381, 17744851762,
+      6445187498, 11688245745, 12938045569, 8415319009, 1405972233, 82117306117807,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value79)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- طـقـم سـجـن ولادي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      4637265517, 0, 0, 0, 0, 14960720067,
+    })
+
+    for index22, value80 in ipairs({
+      13724841516, 15294026484, 15848163279, 12553856439, 15618243532, 15530783724, 8415319009,
+      1405972233, 11688245745, 12871866840,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value80)
+    end
+  end,
+})
+
+AddSection(v69, { "{ فـرع طـقـم احـمـر تـنـسـيـقـي }" })
+
+AddButton(v69, {
+  Name = "- طـقـم احـمـر بـنـاتـي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      115745153758680, 76683091425509, 75159926897589, 0, 0, 14960720067,
+    })
+
+    for index23, value81 in ipairs({
+      14398986629, 14398993174, 14388001192, 12483105503, 13463280917, 13849640889, 6995267080,
+      12563952028, 131767886983910, 84206973218163, 15343119229, 17744851762, 17577949104,
+      8275222163, 13153798277,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value81)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- طـقـم احـمـر ولادي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      4637265517, 0, 0, 0, 0, 14960720067,
+    })
+
+    for index24, value82 in ipairs({
+      14398986629, 14398993174, 14388001192, 12483105503, 13463280917, 6995267080, 5859953144,
+      131767886983906, 12563952028, 15294026484, 15530783724, 15848163279, 15618243532,
+      12553856439,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value82)
+    end
+  end,
+})
+
+AddSection(v69, { "{ فـرع طـقـم جـلـد أسـود تـنـسـيـقـي }" })
+
+AddButton(v69, {
+  Name = "- طـقـم جـلـد أسـود بـنـاتـي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      115745153758680, 76683091425509, 75159926897589, 0, 0, 14960720067,
+    })
+
+    for index25, value83 in ipairs({
+      13463280917, 12483105503, 17627081584, 85199815817187, 13154819267, 10714603421,
+      13900309877, 17744851762, 18522484489, 8760264049, 3062282619, 114487356855004,
+      73808851901807,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value83)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- طـقـم جـلـد أسـود ولادي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      4637265517, 0, 0, 0, 0, 14960720067,
+    })
+
+    for index26, value84 in ipairs({
+      11666244695, 15294007958, 15848166908, 15547027816, 15474892096, 12754522665, 15197532379,
+      114487356855000, 73808851901807,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value84)
+    end
+  end,
+})
+
+AddSection(v69, { "{ فـرع طـقـم امـريـكـي تـنـسـيـقـي }" })
+
+AddButton(v69, {
+  Name = "- طـقـم امـريـكـي بـنـاتـي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      115745153758680, 76683091425509, 75159926897589, 0, 0, 14960720067,
+    })
+
+    for index27, value85 in ipairs({
+      17486162984, 13153798277, 10714603421, 89320309255381, 17744851762, 138373796837870,
+      164692584, 5902378297, 13893182914, 13893179531, 10714614127, 8164735082,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value85)
+    end
+  end,
+})
+
+AddButton(v69, {
+  Name = "- طـقـم امـريـكـي ولادي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer({
+      4637265517, 0, 0, 0, 0, 14960720067,
+    })
+
+    for index28, value86 in ipairs({
+      15294026484, 15530783724, 15848163279, 15618243532, 12553856439, 14657884918, 8610506601,
+      13893182914, 13893179531, 138373796837870,
+    }) do
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("Wear"):InvokeServer(value86)
+    end
+  end,
+})
+
+AddSection(v69, {
+  "اضـغـطِ لـ اخـتـيـار لـون الـ لـمـع بـ الـسـكـن",
+})
+
+AddButton(v69, {
+  Name = "- لـمـع الـ الابـيـض -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ApplyEmmiter"):InvokeServer(unpack({
+      18635845425, "0002FreeWhite",
+    }))
+  end,
+})
+
+AddButton(v69, {
+  Name = "- لـمـع الـ الاصـفـر -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ApplyEmmiter"):InvokeServer(unpack({
+      18635841291, "0003FreeYellow",
+    }))
+  end,
+})
+
+AddButton(v69, {
+  Name = "- لـمـع الـ بـرتـقـالـي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ApplyEmmiter"):InvokeServer(unpack({
+      18635859639, "0004FreeOrange",
+    }))
+  end,
+})
+
+AddButton(v69, {
+  Name = "- لـمـع الـ احـمـر -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ApplyEmmiter"):InvokeServer(unpack({
+      18635837646, "0009FreeRed",
+    }))
+  end,
+})
+
+AddButton(v69, {
+  Name = "- لـمـع الـ وردي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ApplyEmmiter"):InvokeServer(unpack({
+      18635852477, "0008FreePink",
+    }))
+  end,
+})
+
+AddButton(v69, {
+  Name = "- لـمـع الـ بـنـفـسـجـي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ApplyEmmiter"):InvokeServer(unpack({
+      18635843697, "0007FreePurple",
+    }))
+  end,
+})
+
+AddButton(v69, {
+  Name = "- لـمـع الـ ازرق -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ApplyEmmiter"):InvokeServer(unpack({
+      18635847163, "0006FreeBlue",
+    }))
+  end,
+})
+
+local v75 = MakeTab({ Name = "{ أجـسـام }" })
+AddSection(v75, { "فـرع الروؤس Heads : " })
+local v76
+
+AddDropdown(v75, {
+  Name = "اضـغـطِ لـ اخـتـيـار أنـواع الـروؤس :",
+  Options = {
+    "- رأس الـفـضـائي -", "- رأس الـسـلـنـدر -",
+    "- رأس الـمـخـفـي -", "- رأس الـعـيـون الـزرگ -",
+  },
+  Callback = function(value87) v76 = value87 end,
+})
+
+AddButton(v75, {
+  Name = "اخـذِ الـرأس",
+  Callback = function()
+    local v77 = v76
+
+    local v78 = {
+      ["- رأس الـفـضـائي -"] = { { 0, 0, 0, 0, 0, 3210773801 } },
+      ["- رأس الـسـلـنـدر -"] = { { 0, 0, 0, 0, 0, 746767604 } },
+      ["- رأس الـمـخـفـي -"] = { { 0, 0, 0, 0, 0, 134082579 } },
+      ["- رأس الـعـيـون الـزرگ -"] = { { 0, 0, 0, 0, 0, 16580493236 } },
+    }
+
+    if v77 and v78[v76] then
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack(v78[v76]))
+    end
+  end,
+})
+
+AddSection(v75, { "فـرع إرجـل Legs : " })
+local v79
+
+AddDropdown(v75, {
+  Name = "اضـغـطِ لـ اخـتـيـار أنـواع إرجـل",
+  Options = {
+    "- رجـل المـقـطـوعـة الـيـمـنـى -",
+    "- رجـل المـقـطـوعـة الـيـسـرى -",
+    "- رجـل الـقـرصـان الـيـمـنـى -",
+    "- رجـل الـقـرصـان الـيـسـرى -",
+    "- رجـل الـشـبـح الـيـمـنـى -",
+    "- رجـل الـشـبـح الـيـسـرى -",
+    "- رجـل الـهـيـكـل الـعـظـمـي الـيـمـنـى -",
+    "- رجـل الـهـيـكـل الـعـظـمـي الـيـسـرى -",
+    "- رجـل الـمـربـعـة الـيـمـنـى -",
+    "- رجـل الـمـربـعـة الـيـسـرى -",
+  },
+  Callback = function(value88) v79 = value88 end,
+})
+
+AddButton(v75, {
+  Name = "اخـذِ الـرجـل",
+  Callback = function()
+    local v80 = {
+      ["- رجـل المـقـطـوعـة الـيـمـنـى -"] = {
+        { 0, 0, 0, 139607718, 0, 1 },
+      },
+      ["- رجـل المـقـطـوعـة الـيـسـرى -"] = {
+        { 0, 0, 0, 0, 139607673, 1 },
+      },
+      ["- رجـل الـقـرصـان الـيـمـنـى -"] = {
+        { 0, 0, 0, 139028230447120, 0, 1 },
+      },
+      ["- رجـل الـقـرصـان الـيـسـرى -"] = {
+        { 0, 0, 0, 0, 117942829390470, 1 },
+      },
+      ["- رجـل الـشـبـح الـيـمـنـى -"] = {
+        { 0, 0, 0, 16973885715, 0, 1 },
+      },
+      ["- رجـل الـشـبـح الـيـسـرى -"] = { { 0, 0, 0, 0, 16973886243, 1 } },
+      ["- رجـل الـهـيـكـل الـعـظـمـي الـيـمـنـى -"] = {
+        { 0, 0, 0, 14547141130, 0, 1 },
+      },
+      ["- رجـل الـهـيـكـل الـعـظـمـي الـيـسـرى -"] = {
+        { 0, 0, 0, 0, 14547141120, 1 },
+      },
+      ["- رجـل الـمـربـعـة الـيـمـنـى -"] = {
+        { 0, 0, 0, 14842193436, 0, 1 },
+      },
+      ["- رجـل الـمـربـعـة الـيـسـرى -"] = {
+        { 0, 0, 0, 0, 14842193136, 1 },
+      },
+    }
+
+    if v79 and v80[v79] then
+      replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack(v80[v79]))
+    end
+  end,
+})
+
+AddSection(v75, { "قـائـمـة اجـسـام الـريـل For Grils and Boys : " })
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت ريـل -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 11584241181, 11584238141, 11584231502, 11584239464, 11584235843, 11584333045 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد ريـل -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 11572083496, 11572079320, 11572074613, 11572081357, 11572076845, 11572085825 },
+    }))
+  end,
+})
+
+AddSection(v75, { "قـائـمـة اجـسـام R6 For Grils and Boys : " })
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت R6 - {V1} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 108663375829020, 90733951356291, 122736314662910, 82367844537913, 136560844027230, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت R6 - {V2} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 125068828066600, 119222661469730, 101965700248152, 76234818765146, 106851988042310, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت R6 - {V3} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 86507258722819, 117247468826800, 91283582982423, 113714582304440, 129661055591560, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولد R6 - {V1} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 93957172573915, 98264324846024, 138497770019690, 126460010436710, 75728348199721, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولد R6 - {V2} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 123662386366960, 133033016033140, 115549388884240, 126276012366390, 72400495865987, 1 },
+    }))
+  end,
+})
+
+AddSection(v75, { "قـائـمـة اجـسـام بـنـاتـيـه For Grils : " })
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت خـصـر - {1} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 115745153758680, 76683091425509, 75159926897589, 0, 0, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت خـصـر - {2} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 115745153758680, 14854350570, 14854350451, 0, 0, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت خـصـر - {3} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 124754866635882, 76683091425509, 75159926897589, 0, 0, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت خـصـر - {4} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 18525393871, 76683091425509, 75159926897589, 0, 0, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت خـصـر - {5} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 123961224944370, 76683091425509, 75159926897589, 0, 0, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت خـصـر - {6} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 18839824113, 18839824209, 18839824132, 0, 0, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت خـصـر - {7} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 17463695664, 86499698, 86499716, 0, 0, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت خـصـر - {8} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 94480600081999, 78780005468687, 76347276059872, 88300628128468, 103303845633449, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت خـصـر - {9} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 106722085020010, 86510541481566, 93023572847985, 123524708926702, 110478076901790, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت خـصـر - {10} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 88113566583155, 126941315309750, 117457231203780, 73268405400192, 115576357500530, 1 },
+    }))
+  end,
+})
+
+AddSection(v75, { "قـائـمـة اجـسـام دمـى For Doll Grils : " })
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت دمـيـة - {1} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 15282063616, 14976777566, 14976777585, 14538400463, 14538400387, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت دمـيـة - {2} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 14861800638, 14861800626, 14861801452, 14861800627, 14861801454, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت دمـيـة - {3} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 15414810910, 15414810871, 15414809151, 15414809123, 15414809261, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت دمـيـة - {4} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 15539008532, 15539008875, 15539008680, 15539008795, 15539011945, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت دمـيـة - {5} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 17759625333, 17759625415, 17759626879, 17759625390, 17759626537, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت دمـيـة - {6} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 15282063616, 15282063632, 15282063615, 14538400463, 14538400387, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت دمـيـة - {7} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        108077198636230, 114015862007770, 86394514788115, 87605529102859, 105637524573570,
+        95743723466006,
+      },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت دمـيـة - {8} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        134717005197650, 110789009655800, 89859511788523, 80140528076242, 109420663404260,
+        93104168642821,
+      },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت دمـيـة - {9} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        84592442646372, 70671659005145, 78297692627531, 126320298123020, 137848590484970,
+        84958558329384,
+      },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم بـنـت دمـيـة - {10} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        107634768773980, 99283208919571, 112609786386740, 117156264096020, 108762115135095,
+        110002320975200,
+      },
+    }))
+  end,
+})
+
+AddSection(v75, { "فـرع اجـسـام الـصـغـيـرة For mini Bodys : " })
+
+AddButton(v75, {
+  Name = "- جـسـم القـزم - {1} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 17267677772, 17267677732, 17267677707, 17267677652, 17267677787, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم القـزم - {2} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 115547443206190, 89917056388404, 95385687881410, 132940983485660, 134244064776680, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم القـزم - {3} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 126267841602940, 77530451194918, 123471958406890, 117042768644170, 131948590344340, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم القـزم - {4} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 14579958702, 14579959062, 14579959191, 14579959249, 14579963667, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم القـزم - {5} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 77813057823038, 135110043370140, 116607813654019, 138966229804486, 128961183894050, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم القـزم - {6} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 120973199097560, 118345433416020, 112849465115864, 78321005147549, 106586789635640, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم القـزم - {7} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 95887848489798, 133816692198560, 110558457687394, 14854025333, 95759514473972, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم القـزم - {8} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 82318122660907, 86770305706868, 105392627824390, 125922098522992, 136761377579911, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم القـزم - {9} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 18842316848, 18842316855, 18842316840, 18842316855, 18842316804, 18842316805 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم القـزم - {10} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        132231016359090, 104607739360400, 131257324476100, 94037618455054, 104165685902190,
+        93619226083620,
+      },
+    }))
+  end,
+})
+
+AddSection(v75, { "فـرع اجـسـام ولاديـه For Boys : " })
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد - عـادي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 4637265517, 0, 0, 0, 0, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد - خـصـر -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 17754346388, 0, 0, 0, 0, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد - خـصـر + ارجـل الـطـويـلـه -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 17754346388, 0, 0, 91059998815242, 132096480597440, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد - قـرصـان -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 79002721744296, 130832500504528, 70920002007780, 139028230447120, 117942829390470, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد - نـحـيـف -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 92757812011061, 99519402284266, 115905570886700, 0, 0, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد - كـوبـي -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 86499666, 27112039, 27112052, 27112068, 27112056, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد - رول -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 27112025, 27112039, 27112052, 3230472745, 3230470862, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد - طويل -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 135044353978550, 85060250881735, 134059209907868, 125489500075450, 112526875871700, 1 },
+    }))
+  end,
+})
+
+AddSection(v75, { "فـرع اجـسـام الـمـعـضـلـة For Muscles Bodys : " })
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد عـضـلات - {1} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 18178775358, 18178775182, 18178775725, 18178777453, 18178775695, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد عـضـلات - {2} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 84807240273695, 140219297913850, 81910486748527, 126161096503611, 100229264383620, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد عـضـلات - {3} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 17810786797, 17810786572, 17810786775, 17810786516, 17810786562, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد عـضـلات - {4} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 132096540859660, 92965813863196, 129503145371080, 93918346320227, 99916193130053, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم ولـد عـضـلات - {5} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 106646306961776, 72951123742968, 81248622873061, 87666174812433, 95036381784666, 1 },
+    }))
+  end,
+})
+
+AddSection(v75, { "فـرع اجـسـام الـعـمـلاقـة For Giant Bodys : " })
+
+AddButton(v75, {
+  Name = "- جـسـم عـمـلاق قـصـيـر - {1} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 15976071359, 15976074123, 15976074883, 15976074171, 15976074125, 15976074135 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم عـمـلاق ضـعـيـف - {2} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 75845963517621, 114145242585230, 93358106465215, 130887057643590, 80245769527311, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم عـمـلاق سـمـيـن - {3} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 106800882836400, 88668275797583, 79115019295211, 130887057643590, 80245769527311, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم عـمـلاق حـجـري - {4} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 15489582363, 15489584622, 15489584734, 15489584682, 15489582354, 15489582340 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم عـمـلاق ضـخـم - {5} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 77616785544978, 89618098969398, 130887057643589, 80245769527311, 72279390678562, 1 },
+    }))
+  end,
+})
+
+AddSection(v75, { "فـرع اجـسـام الـمـرعـبـة For Funny Bodys : " })
+
+AddButton(v75, {
+  Name = "- جـسـم مـرعـب - {1} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        130533187401120, 82313592622379, 136892759155610, 90839831988045, 81744786606406,
+        71187536103249,
+      },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم مـرعـب - {2} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 18323736080, 18323735949, 18323736119, 18323735954, 18323736108, 18323738913 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم مـرعـب - {3} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        81371573427804, 87682307704809, 72446603909795, 97545401996192, 122751252034530,
+        109517623948540,
+      },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم مـرعـب - {4} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        130534082089651, 137200820766800, 137081396141616, 96484599070984, 81936125008248,
+        90653263238644,
+      },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم مـرعـب - {5} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        118931663545940, 85584537276480, 106323264628470, 132110985090360, 72700856421217,
+        135133764134910,
+      },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم مـرعـب - {6} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        94527302982593, 94929010338358, 119690035158820, 75115958717887, 135370681165950,
+        103557019733560,
+      },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم مـرعـب - {7} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        110747162387320, 111723592751140, 99839390503493, 126670886621290, 87820957877802,
+        82458247060179,
+      },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم مـرعـب - {8} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        105430248260831, 71665058742162, 79006954318705, 106030160822890, 123273635640020,
+        105704147292610,
+      },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم مـرعـب - {9} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        123727775161390, 73481450382225, 87962661860151, 126478779362765, 111995857279110,
+        134593919650510,
+      },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم مـرعـب - {10} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        132377619816080, 114368216065462, 71188101649997, 79751613556671, 98354166061673,
+        115540145959840,
+      },
+    }))
+  end,
+})
+
+AddSection(v75, { "فـرع اجـسـام الـغـريـبـة For Stranger Bodys : " })
+
+AddButton(v75, {
+  Name = "- جـسـم مـقـلـوب - {1} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 17061950321, 17061950752, 17061950749, 17061950868, 17061954240, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم يـزحـف - {2} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 16766192865, 16766190802, 16766190790, 16766190782, 16766190791, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم عـجـلـة - {3} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 76534060681998, 109903598428350, 133112214757310, 74937392050818, 75210106631996, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم كـرسـي - {4} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 16872133248, 16872133982, 16872133723, 16872133730, 16872133733, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم اعـوچ - {5} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 18666976564, 18666976661, 18666976631, 18666976759, 18666976467, 1 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم نـاري - {6} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 2608539495, 2608537440, 2608534881, 2608538559, 2608536258, 12726967427 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم هـامـسـتـر - {7} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 14898536974, 14898536957, 14898537277, 14898537300, 14898537292, 14898536975 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم مـشـهـور - {8} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 4908013767, 4924607824, 4924606646, 4924608321, 4924606646, 4924607176 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم دبـه - {9} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      { 16305051918, 16305053205, 16305051718, 16305051982, 16305053865, 16305055011 },
+    }))
+  end,
+})
+
+AddButton(v75, {
+  Name = "- جـسـم سـيـقـمـا - {10} -",
+  Callback = function()
+    replicatedStorage:WaitForChild("Remotes"):WaitForChild("ChangeCharacterBody"):InvokeServer(unpack({
+      {
+        93074174823369, 132536752391730, 135472023716560, 108357534548800, 75656998334032,
+        122033923082830,
+      },
+    }))
+  end,
+})
+
+players.LocalPlayer.Character.Humanoid.Health = 0
+
+-- https://discord.gg/AwGHNh7Z7T
