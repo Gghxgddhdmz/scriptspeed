@@ -12,20 +12,20 @@ local runService = game:GetService("RunService")
 wait(0.1)
 
 starterGui:SetCore("SendNotification", {
-  Title = "تـم تـحـديـث سـكـربـت الـمـطـورة جـيـون",
-  Text = "جـار تـحـمـيـل... ",
+  Title = " RV~PSYCHO",
+  Text = " RV ON TOP... ",
   Duration = 5,
 })
 
 wait(0.1)
 
 starterGui:SetCore("SendNotification", {
-  Title = "مـن تـطـويـر الـمـطـورة جـيـون ",
+  Title = "مـن تطوير RV~PSYCHO ",
   Text = "جـار تـحـمـيـل... ",
   Duration = 5,
 })
 
-local v1 = { "RolePlayName", "ッ Script JG Brookhaven ッ" }
+local v1 = { "RolePlayName", "ッ Script RV~PSYCHO ッ" }
 replicatedStorage.RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(v1))
 wait(0.1)
 
@@ -39,7 +39,7 @@ replicatedStorage.RE:FindFirstChild("1RPNam1eTex1t"):FireServer(unpack(v1))
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Gghxgddhdmz/scriptspeed/refs/heads/main/Jeon-Hub_Gold_White.lua"))()
 
 MakeWindow({
-  Hub = { Title = "- Script JG Brookhaven | V2.4 -", Animation = "Script JG Brookhaven" },
+  Hub = { Title = "- Script RV~PSYCHO Brookhaven | V2.4 -", Animation = "Script RV~PSYCHO Brookhaven" },
   Key = {
     KeySystem = false,
     Title = "Key System",
@@ -56,7 +56,7 @@ MakeWindow({
 })
 
 MinimizeButton({
-  Image = "rbxassetid://6675147486",
+  Image = "rbxassetid://76819021",
   Size = { 50, 50 },
   Color = Color3.fromRGB(8, 0, 0),
   Corner = true,
@@ -65,27 +65,17 @@ MinimizeButton({
 })
 
 local v2 = MakeTab({ Name = "{ حـقـوق }" })
-AddImageLabel(v2, { Name = "اوهـايـو", Image = "rbxassetid://6675147486" })
+AddImageLabel(v2, { Name = "راسبا ~سايكو", Image = "rbxassetid://6675147486" })
 
-AddSection(v2, { "أحـلا تـحـيـة لـمـؤلاتـكـم ريـمـاس " })
+AddSection(v2, { "سايكو يكللكم استخدموه راح نستمر بل تحديثات " })
 
 AddSection(v2, {
-  "حـسـابـات الـمـطـوره جـيـون اي سـؤال؟  اي فـكـرة؟  اي اضـافـات؟  اي مـعـلـومـات؟ ",
+  "حـسـابـات سايكو؟ ",
 })
 
 AddButton(v2, {
-  Name = "اضـغـط ل نـسـخ حـسـاب الـمـطـورة جـيـوَن TikTok",
-  Callback = function() setclipboard("Joy._.gril") end,
-})
-
-AddButton(v2, {
-  Name = "اضـغـط ل نـسـخ حـسـاب الـمـطـورة جـيـوَن Roblox",
-  Callback = function() setclipboard("Nour_game80") end,
-})
-
-AddButton(v2, {
-  Name = "اضـغـط ل نـسـخ حـسـاب الـمـطـورة جـيـوَن Discord",
-  Callback = function() setclipboard("Joy._.girlx") end,
+  Name = "اضـغـط ل نـسـخ حـسـاب الـمـطـورة سايكو TikTok",
+  Callback = function() setclipboard("b_145d") end,
 })
 
 AddSection(v2, { "انـتـظـروا الـتـحـديـثـات الـقـادمـة" })
