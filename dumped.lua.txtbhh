@@ -65,7 +65,7 @@ MinimizeButton({
 })
 
 local v2 = MakeTab({ Name = "{ حـقـوق }" })
-AddImageLabel(v2, { Name = "راسبا ~سايكو", Image = "rbxassetid://6675147486" })
+AddImageLabel(v2, { Name = "راسبا ~سايكو", Image = "rbxassetid://76819021" })
 
 AddSection(v2, { "سايكو يكللكم استخدموه راح نستمر بل تحديثات " })
 
