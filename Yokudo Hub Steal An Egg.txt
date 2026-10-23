@@ -2,9 +2,9 @@ local _MERGED = {}
 _MERGED["Config.lua"] = [=[
 
 _G.YOKUDO = {
-    Name = "YOKUDO HUB | Steal An Egg",
-    Version = "telegram : @maibigber",
-    Author = "Yokudo",
+    Name = "Y_RV_AP HUB | Steal An Egg",
+    Version = "telegram : @LucPsy",
+    Author = "فيلق RV",
 
     AssetID = "rbxassetid://101352576986760",
 
@@ -86,7 +86,7 @@ ToggleStroke.Transparency = 0.2
 ToggleStroke.Parent = Toggle
 
 local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "YOKUDO_HUB"
+ScreenGui.Name = "RV_AP_HUB"
 ScreenGui.ResetOnSpawn = false
 ScreenGui.IgnoreGuiInset = true
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
